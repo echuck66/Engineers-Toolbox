@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.Calculators.PaymentCalculatorPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:PaymentCalculatorViewModel"
+             Shell.NavBarIsVisible="True"
+             xmlns:handlers="clr-namespace:EngineersToolbox.Handlers"
+             Title="Payment Calculator">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Padding="15">
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Principal"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Interest"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="2" Grid.Column="0" Margin="0,0,0,3" Text="Term"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="0,0,0,3" Text="Frequency"  FontAttributes="Bold"/>
+
+            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="0" HeightRequest="45" HorizontalOptions="FillAndExpand">
+                <handlers:BorderlessEntry Text="{Binding Principal}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
+            </Frame>
+            
+            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+                <handlers:BorderlessEntry Text="{Binding InterestPercent}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
+            </Frame>
+            <Frame Margin="5,0,0,0" Grid.Row="3" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+                <handlers:BorderlessEntry Text="{Binding Term}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
+            </Frame>
+            <Frame Margin="5,0,0,0" Grid.Row="3" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Picker VerticalOptions="Fill" HorizontalOptions="FillAndExpand" ItemsSource="{Binding FreqencyOptions}" ItemDisplayBinding="{Binding FrequencyName}" SelectedItem="{Binding FrequencySelector}" />
+            </Frame>
+            <Button
+                    Margin="10,10,0,0"
+                    x:Name="CalculatePaymentBtn"
+                    Text="Calculate"
+                    SemanticProperties.Hint="Convert Value"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding CalculatePaymentCommand }"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"/>
+
+
+
+            <Label VerticalOptions="Center" Grid.ColumnSpan="2" Grid.Row="5" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding Payment }" HorizontalTextAlignment="End" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

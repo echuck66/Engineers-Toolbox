@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.MainPage" 
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:MainPageViewModel"
+             Shell.NavBarIsVisible="false"
+             Title="Main">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="toolbox.png"
+                SemanticProperties.Description="Toolbox"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Engineer's Toolbox"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Useful Tools and Utilities"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Useful Tools and Utilities for Engineers"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="OpenToolboxBtn"
+                Text="Open Toolbox"
+                SemanticProperties.Hint="Open the Toolbox"
+                HorizontalOptions="Center" 
+                Command="{Binding OpenToolboxPageCommand}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

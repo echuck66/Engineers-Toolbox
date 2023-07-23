@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.ConvertersPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:ConvertersViewModel"
+             Shell.NavBarIsVisible="True"
+             Title="Converters Toolset">
+    
+    <VerticalStackLayout >
+
+
+            <Label
+                Margin="25"
+                Text="Select a Conversion Tool" 
+                FontSize="Large" 
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+        
+
+        <Grid 
+            Margin="25"
+            RowSpacing="25"
+            ColumnDefinitions="*" 
+            RowDefinitions="*,*,*">
+                <Button
+                    x:Name="OpenBase64ConverterBtn"
+                    Text="Base64 String Conversions"
+                    SemanticProperties.Hint="Open the Base64 String Converter Page"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenBase64ConverterPageCommand }"
+                    Grid.Row="0" />
+
+            <Button
+                    x:Name="OpenNumberBaseConverterBtn"
+                    Text="Number Base Conversions"
+                    SemanticProperties.Hint="Open the Distance Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Grid.Row="1"  />
+            <Button
+                    x:Name="OpenDistanceConverterBtn"
+                    Text="Distance Conversions"
+                    SemanticProperties.Hint="Open the Distance Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Grid.Row="2"  />
+            </Grid>
+           
+
+    </VerticalStackLayout>
+</ContentPage>

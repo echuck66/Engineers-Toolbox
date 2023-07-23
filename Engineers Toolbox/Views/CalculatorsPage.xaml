@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.CalculatorsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:CalculatorsViewModel"
+             Shell.NavBarIsVisible="True"
+             Title="Calculators">
+    <VerticalStackLayout>
+        <Label
+                Margin="25"
+                Text="Select a Calculator" 
+                FontSize="Large" 
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+        <Grid 
+            Margin="25"
+            RowSpacing="25"
+            ColumnDefinitions="*" 
+            RowDefinitions="*,*">
+            
+            <Button
+                    x:Name="OpenPaymentCalculatorBtn"
+                    Text="Payment Calculator"
+                    SemanticProperties.Hint="Payment Calculator"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenPaymentCalculatorPageCommand }"
+                    Grid.Row="0" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
