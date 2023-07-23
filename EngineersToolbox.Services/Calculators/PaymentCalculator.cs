@@ -52,7 +52,6 @@ namespace EngineersToolbox.Services.Calculators
                     break;
             }
 
-
             double dblTerm = Convert.ToDouble(term);
             double dblTermRate = Convert.ToDouble(termRate);
             double dblPrincipal = Convert.ToDouble(principal);
