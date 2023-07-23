@@ -57,7 +57,11 @@ namespace EngineersToolbox.ViewModels
 
             try
             {
-                
+                if (Principal > 0 && InterestPercent > 0 && FrequencySelector != null && Term > 0)
+                {
+                    decimal interestRate = InterestPercent / 100;
+                    Payment = _calculator.GetPayment(Term, FrequencySelector.Frequency, Principal, interestRate);
+                }
             }
             catch (Exception ex)
             {

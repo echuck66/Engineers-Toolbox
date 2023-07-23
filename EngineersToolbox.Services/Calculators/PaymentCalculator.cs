@@ -23,7 +23,45 @@ namespace EngineersToolbox.Services.Calculators
 
         public decimal GetPayment(int term, PaymentFrequency frequency, decimal principal, decimal interestRate)
         {
-            return 0;
+            if (interestRate <= 0)
+            {
+                return 0;
+            }
+
+            decimal termRate = 0;
+
+            switch(frequency)
+            {
+                case PaymentFrequency.Daily:
+                    termRate = interestRate / 356;
+                    break;
+                case PaymentFrequency.Weekly:
+                    termRate = interestRate / 52;
+                    break;
+                case PaymentFrequency.SemiWeekly:
+                    termRate = interestRate / 26;
+                    break;
+                case PaymentFrequency.SemiMonthly:
+                    termRate = interestRate / 24;
+                    break;
+                case PaymentFrequency.Monthly:
+                    termRate = interestRate / 12;
+                    break;
+                case PaymentFrequency.Annually:
+                    termRate = interestRate;
+                    break;
+            }
+
+
+            double dblTerm = Convert.ToDouble(term);
+            double dblTermRate = Convert.ToDouble(termRate);
+            double dblPrincipal = Convert.ToDouble(principal);
+
+            double dblPayment = (dblTermRate * dblPrincipal) / (1 - Math.Pow((1 + dblTermRate), (-1 * dblTerm)));
+
+            decimal payment = Convert.ToDecimal(dblPayment);
+
+            return payment;
         }
     }
 }
