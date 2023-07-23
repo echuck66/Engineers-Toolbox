@@ -134,7 +134,12 @@ namespace EngineersToolbox.ViewModels
                 }
             };
 
+            if (FrequencySelector == null)
+            {
+                FrequencySelector = FreqencyOptions.FirstOrDefault(o => o.Frequency == PaymentFrequency.Monthly);
+            }
 
+            InterestPercent = 8;
         }
     }
 }

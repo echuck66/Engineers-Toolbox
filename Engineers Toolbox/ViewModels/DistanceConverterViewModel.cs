@@ -45,7 +45,7 @@ namespace EngineersToolbox.ViewModels
         [RelayCommand]
         public async Task ConvertValue()
         {
-            if (IsBusy || ValueUnits == 0)
+            if (IsBusy)
                 return;
             IsBusy = true;
 
@@ -120,14 +120,6 @@ namespace EngineersToolbox.ViewModels
 
         public void Bind()
         {
-            if (ValueUnits == 0)
-            {
-                ValueUnits = DistanceUnits.Mile;
-            }
-            if (ConvertedValueUnits == 0)
-            {
-                ConvertedValueUnits = DistanceUnits.Kilometer;
-            }
 
             ValueUnitsOptions = new ObservableCollection<DistanceUnitsSelector>()
             {
@@ -151,6 +143,16 @@ namespace EngineersToolbox.ViewModels
                 new DistanceUnitsSelector() { Units = DistanceUnits.Meter, UnitsName = "m" },
                 new DistanceUnitsSelector() { Units = DistanceUnits.Kilometer, UnitsName = "km" }
             };
+
+            if (ValueUnitsSelector == null)
+            {
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == DistanceUnits.Mile);
+            }
+
+            if (ConvertedValueUnitsSelector == null)
+            {
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == DistanceUnits.Kilometer);
+            }
         }
     }
 }
