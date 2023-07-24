@@ -16,11 +16,15 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="toolbox.png"
-                SemanticProperties.Description="Toolbox"
-                HeightRequest="150"
-                HorizontalOptions="Center" />
+            <Image>
+                <Image.Source>
+                    <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource toolbox}"
+                        Color="{StaticResource Primary}"
+                        Size="86"/>
+                </Image.Source>
+            </Image>
 
             <Label
                 Text="Engineer's Toolbox"

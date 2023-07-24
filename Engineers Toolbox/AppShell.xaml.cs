@@ -14,10 +14,16 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(ToolboxPage), typeof(ToolboxPage));
         Routing.RegisterRoute(nameof(ConvertersPage), typeof(ConvertersPage));
+        Routing.RegisterRoute(nameof(CalculatorsPage), typeof(CalculatorsPage));
         Routing.RegisterRoute(nameof(Base64ConverterPage), typeof(Base64ConverterPage));
         Routing.RegisterRoute(nameof(DistanceConverterPage), typeof(DistanceConverterPage));
-        Routing.RegisterRoute(nameof(CalculatorsPage), typeof(CalculatorsPage));
+        Routing.RegisterRoute(nameof(AngleConverterPage), typeof(AngleConverterPage));  
         Routing.RegisterRoute(nameof(PaymentCalculatorPage), typeof(PaymentCalculatorPage));
+        Routing.RegisterRoute(nameof(InterestCalculatorPage), typeof(InterestCalculatorPage));
+        Routing.RegisterRoute(nameof(FuelEconomyCalculator), typeof(FuelEconomyCalculator));
+        Routing.RegisterRoute(nameof(AreaConverterPage), typeof(AreaConverterPage));
+        Routing.RegisterRoute(nameof(PressureConverterPage), typeof(PressureConverterPage));
+        Routing.RegisterRoute(nameof(NumberBaseConverterPage), typeof(NumberBaseConverterPage));
 	}
 
     public static async Task Alert(string message, string title = "Error")

@@ -10,8 +10,17 @@
              Shell.NavBarIsVisible="True"
              Title="Calculators">
     <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource calculator}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
         <Label
-                Margin="25"
+                Margin="8"
                 Text="Select a Calculator" 
                 FontSize="Large" 
                 FontAttributes="Bold"
@@ -32,7 +41,7 @@
                     Text="Interest Calculator"
                     SemanticProperties.Hint="Interest Calculator"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding OpenPaymentCalculatorPageCommand }" />
+                    Command="{Binding OpenInterestCalculatorPageCommand }" />
 
         <Button
                 Margin="10"
@@ -40,7 +49,7 @@
                     Text="Fuel Economy Calculator"
                     SemanticProperties.Hint="Fuel Economy Calculator"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding OpenPaymentCalculatorPageCommand }" />
+                    Command="{Binding OpenFuelEconomyCalculatorPageCommand }" />
 
     </VerticalStackLayout>
 </ContentPage>

@@ -10,6 +10,15 @@
              Shell.NavBarIsVisible="True"
              Title="Base64 String Converter">
     <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource code}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
         <Label 
             Margin="10"
             Text="Text"

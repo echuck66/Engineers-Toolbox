@@ -44,6 +44,50 @@ namespace EngineersToolbox.ViewModels
         }
 
         [RelayCommand]
+        private async Task OpenInterestCalculatorPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(InterestCalculatorPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenFuelEconomyCalculatorPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(FuelEconomyCalculator));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
         private async Task CloseTool()
         {
             if (IsBusy)

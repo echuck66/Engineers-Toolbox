@@ -10,6 +10,9 @@ namespace EngineersToolbox.Models
     {
         Base64,
         Distance,
-        NumberBase
+        NumberBase,
+        Angle,
+        Area,
+        Pressure
     }
 }

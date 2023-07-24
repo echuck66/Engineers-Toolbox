@@ -11,6 +11,15 @@
              xmlns:handlers="clr-namespace:EngineersToolbox.Handlers"
              Title="Payment Calculator">
     <VerticalStackLayout>
+        <Image>
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource payments}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
         <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Padding="15">
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Principal"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Interest"  FontAttributes="Bold"/>

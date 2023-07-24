@@ -31,7 +31,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
-	  <CodesignKey>Apple Development: Created via API (X2AZ2X6T55)</CodesignKey>
+	  <CodesignKey>Apple Development: Created via API (S4RJ92RQ3B)</CodesignKey>
 	  <CodesignProvision>VS: com.crawfordnetsolutions.engineerstoolbox Development</CodesignProvision>
 	  <ProvisioningType>automatic</ProvisioningType>
 	</PropertyGroup>
@@ -88,6 +88,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
+	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
+	  <None Remove="Resources\Images\angle_left.svg" />
+	  <None Remove="Resources\Images\arrows_left_right_to_line.svg" />
+	  <None Remove="Resources\Images\calculator.svg" />
+	  <None Remove="Resources\Images\chart_area.svg" />
+	  <None Remove="Resources\Images\gas_pump.svg" />
+	  <None Remove="Resources\Images\percent.svg" />
 	  <None Remove="Resources\Images\toolbox.svg" />
 	</ItemGroup>
 
@@ -98,13 +107,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\Icons.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CalculatorsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Calculators\FuelEconomyCalculator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Calculators\InterestCalculatorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Calculators\PaymentCalculatorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ConvertersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\AngleConverterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\AreaConverterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Converters\Base64ConverterPage.xaml">
@@ -114,6 +138,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Converters\NumberBaseConverterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\PressureConverterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ToolboxPage.xaml">

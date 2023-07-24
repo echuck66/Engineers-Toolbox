@@ -11,10 +11,18 @@
              Title="Converters Toolset">
     
     <VerticalStackLayout >
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource convert}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
 
-
-            <Label
-                Margin="25"
+        <Label
+                Margin="8"
                 Text="Select a Conversion Tool" 
                 FontSize="Large" 
                 FontAttributes="Bold"
@@ -48,7 +56,7 @@
                     Text="Area Conversions"
                     SemanticProperties.Hint="Open the Area Converter Page"
                     HorizontalOptions="FillAndExpand" 
-                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Command="{Binding OpenAreaConverterPageCommand }"
                     Grid.Row="2"  />
 
             <Button
@@ -56,15 +64,17 @@
                     Text="Pressure Conversions"
                     SemanticProperties.Hint="Open the Pressure Converter Page"
                     HorizontalOptions="FillAndExpand" 
-                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Command="{Binding OpenPressureConverterPageCommand }"
                     Grid.Row="3"  />
             <Button
                     x:Name="OpenAngleConverterBtn"
                     Text="Angle Conversions"
                     SemanticProperties.Hint="Open the Angle Converter Page"
                     HorizontalOptions="FillAndExpand" 
-                    Command="{Binding OpenDistanceConverterPageCommand }"
-                    Grid.Row="4"  />
+                    Command="{Binding OpenAngleConverterPageCommand }"
+                    Grid.Row="4">
+                
+            </Button>
         </Grid>
            
 
