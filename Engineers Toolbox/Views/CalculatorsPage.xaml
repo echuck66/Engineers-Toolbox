@@ -26,5 +26,21 @@
                     HorizontalOptions="FillAndExpand"
                     Command="{Binding OpenPaymentCalculatorPageCommand }" />
 
+        <Button
+                Margin="10"
+                    x:Name="OpenInterestCalculatorBtn"
+                    Text="Interest Calculator"
+                    SemanticProperties.Hint="Interest Calculator"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenPaymentCalculatorPageCommand }" />
+
+        <Button
+                Margin="10"
+                    x:Name="OpenFuelEconomyCalculatorBtn"
+                    Text="Fuel Economy Calculator"
+                    SemanticProperties.Hint="Fuel Economy Calculator"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenPaymentCalculatorPageCommand }" />
+
     </VerticalStackLayout>
 </ContentPage>

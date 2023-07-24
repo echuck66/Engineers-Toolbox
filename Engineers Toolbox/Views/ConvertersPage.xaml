@@ -26,7 +26,7 @@
             Margin="25"
             RowSpacing="25"
             ColumnDefinitions="*" 
-            RowDefinitions="*,*,*">
+            RowDefinitions="*,*,*,*,*">
                 <Button
                     x:Name="OpenBase64ConverterBtn"
                     Text="Base64 String Conversions"
@@ -36,20 +36,36 @@
                     Grid.Row="0" />
 
             <Button
-                    x:Name="OpenNumberBaseConverterBtn"
-                    Text="Number Base Conversions"
-                    SemanticProperties.Hint="Open the Distance Converter Page"
-                    HorizontalOptions="FillAndExpand" 
-                    Command="{Binding OpenDistanceConverterPageCommand }"
-                    Grid.Row="1"  />
-            <Button
                     x:Name="OpenDistanceConverterBtn"
                     Text="Distance Conversions"
                     SemanticProperties.Hint="Open the Distance Converter Page"
                     HorizontalOptions="FillAndExpand" 
                     Command="{Binding OpenDistanceConverterPageCommand }"
+                    Grid.Row="1"  />
+
+            <Button
+                    x:Name="OpenAreaConverterBtn"
+                    Text="Area Conversions"
+                    SemanticProperties.Hint="Open the Area Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenDistanceConverterPageCommand }"
                     Grid.Row="2"  />
-            </Grid>
+
+            <Button
+                    x:Name="OpenPressureConverterBtn"
+                    Text="Pressure Conversions"
+                    SemanticProperties.Hint="Open the Pressure Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Grid.Row="3"  />
+            <Button
+                    x:Name="OpenAngleConverterBtn"
+                    Text="Angle Conversions"
+                    SemanticProperties.Hint="Open the Angle Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenDistanceConverterPageCommand }"
+                    Grid.Row="4"  />
+        </Grid>
            
 
     </VerticalStackLayout>

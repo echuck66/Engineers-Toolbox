@@ -11,8 +11,31 @@
              Title="Base64 String Converter">
     <VerticalStackLayout>
         <Label 
-            Text="Base64 String Converter"
+            Margin="10"
+            Text="Text"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Entry Margin="10" Text="{Binding Value }" />
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*" ColumnSpacing="5">
+            <Button
+                Margin="10"
+                    x:Name="GetPlainTextBtn"
+                    Text="Get Plain Text"
+                    SemanticProperties.Hint="Get Plain Text"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding DeHashValueCommand }"
+                    Grid.Column="0"  />
+            <Button
+                Margin="10"
+                    x:Name="GetHashedValueBtn"
+                    Text="Get Hashed Value"
+                    SemanticProperties.Hint="Get Hashed Value"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding HashValueCommand }"
+                    Grid.Column="1"  /> 
+        </Grid>
+
+        <Label Margin="10" Text="{Binding HashedValue }"></Label>
+
     </VerticalStackLayout>
 </ContentPage>
