@@ -11,6 +11,15 @@
              xmlns:handlers="clr-namespace:EngineersToolbox.Handlers"
              Title="Distance Converter">
     <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource arrows_left_right_line}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
         <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto" Padding="15">
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Value"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>

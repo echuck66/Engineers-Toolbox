@@ -65,6 +65,94 @@ namespace EngineersToolbox.ViewModels
         }
 
         [RelayCommand]
+        private async Task OpenNumberBaseConverterPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(NumberBaseConverterPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenAngleConverterPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(AngleConverterPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenAreaConverterPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(AreaConverterPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenPressureConverterPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(PressureConverterPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
         private async Task CloseTool()
         {
             if (IsBusy)

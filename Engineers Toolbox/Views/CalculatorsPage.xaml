@@ -10,28 +10,46 @@
              Shell.NavBarIsVisible="True"
              Title="Calculators">
     <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource calculator}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
         <Label
-                Margin="25"
+                Margin="8"
                 Text="Select a Calculator" 
                 FontSize="Large" 
                 FontAttributes="Bold"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
 
-        <Grid 
-            Margin="25"
-            RowSpacing="25"
-            ColumnDefinitions="*" 
-            RowDefinitions="*,*">
-            
             <Button
+                Margin="10"
                     x:Name="OpenPaymentCalculatorBtn"
                     Text="Payment Calculator"
                     SemanticProperties.Hint="Payment Calculator"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding OpenPaymentCalculatorPageCommand }"
-                    Grid.Row="0" />
+                    Command="{Binding OpenPaymentCalculatorPageCommand }" />
 
-        </Grid>
+        <Button
+                Margin="10"
+                    x:Name="OpenInterestCalculatorBtn"
+                    Text="Interest Calculator"
+                    SemanticProperties.Hint="Interest Calculator"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenInterestCalculatorPageCommand }" />
+
+        <Button
+                Margin="10"
+                    x:Name="OpenFuelEconomyCalculatorBtn"
+                    Text="Fuel Economy Calculator"
+                    SemanticProperties.Hint="Fuel Economy Calculator"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding OpenFuelEconomyCalculatorPageCommand }" />
+
     </VerticalStackLayout>
 </ContentPage>

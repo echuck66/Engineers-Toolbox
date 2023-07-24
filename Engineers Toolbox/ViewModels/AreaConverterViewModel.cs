@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.ViewModels
 {
-    public enum CalculatorType
+    public partial class AreaConverterViewModel : ToolboxBaseViewModel
     {
-        Payment,
-        Interest,
-        FuelEconomy
     }
 }

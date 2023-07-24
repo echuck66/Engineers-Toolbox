@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <x:String x:Key="angle_left">&#xf568;</x:String>
+    <x:String x:Key="arrows_left_right_line">&#xe4ba;</x:String>
+    <x:String x:Key="calculator">&#xf1ec;</x:String>
+    <x:String x:Key="area">&#xf1fe;</x:String>
+    <x:String x:Key="fuel">&#xf52f;</x:String>
+    <x:String x:Key="percent">&#x25;</x:String>
+    <x:String x:Key="toolbox">&#xf552;</x:String>
+    <x:String x:Key="payments">&#xf0d6;</x:String>
+    <x:String x:Key="convert">&#xf362;</x:String>
+    <x:String x:Key="pressure">&#xf496;</x:String>
+    <x:String x:Key="code">&#xf121;</x:String>
+
+</ResourceDictionary>
