@@ -24,17 +24,11 @@
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Value"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Margin="0,0,0,3" Text="Convert To"  FontAttributes="Bold"/>
-            
-            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="0" HeightRequest="45" HorizontalOptions="FillAndExpand">
-                <handlers:BorderlessEntry Text="{Binding Value}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
-            </Frame>
-            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
-                <Picker ItemsSource="{Binding ValueUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ValueUnitsSelector}" />
-            </Frame>
-            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="2" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-                <Picker VerticalOptions="Fill" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ConvertedValueUnitsSelector}" />
-            </Frame>
-            
+
+            <Entry Margin="5,0,0,0"  Grid.Row="1" Grid.Column="0" HeightRequest="45" Text="{Binding Value }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ValueUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ValueUnitsSelector}" />
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="2" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ConvertedValueUnitsSelector}" />
+
             <Button
                     Margin="10,10,0,0"
                     x:Name="ConvertValueBtn"
