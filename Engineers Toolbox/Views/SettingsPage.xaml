@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.SettingsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:SettingsViewModel"
+             Shell.NavBarIsVisible="True"
+             Title="Settings">
+    <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource gear}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
+    </VerticalStackLayout>
+</ContentPage>

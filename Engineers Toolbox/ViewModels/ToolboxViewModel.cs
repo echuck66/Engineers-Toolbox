@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Views;
+using EngineersToolbox.Views.Calculators;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,6 +53,52 @@ namespace EngineersToolbox.ViewModels
             try
             {
                 await Shell.Current.GoToAsync(nameof(CalculatorsPage));
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenEstimationsPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(EstimationsPage));
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task OpenSettingsPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(SettingsPage));
 
             }
             catch (Exception ex)

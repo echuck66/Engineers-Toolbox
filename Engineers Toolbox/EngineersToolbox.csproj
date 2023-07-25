@@ -116,6 +116,9 @@
 	  <MauiXaml Update="Views\CalculatorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\EstimationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Calculators\FuelEconomyCalculator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -146,6 +149,9 @@
 	  <MauiXaml Update="Views\Converters\PressureConverterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ToolboxPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -154,6 +160,16 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\EngineersToolbox.Models\EngineersToolbox.Models.csproj" />
 	  <ProjectReference Include="..\EngineersToolbox.Services\EngineersToolbox.Services.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\EstimationPage.xaml.cs">
+	    <DependentUpon>EstimationPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\Estimations\" />
 	</ItemGroup>
 
 </Project>

@@ -47,7 +47,7 @@
                 Text="Estimations"
                 SemanticProperties.Hint="Open the Estimations Toolset"
                 HorizontalOptions="FillAndExpand" 
-                Command="{Binding OpenCalculatorsPageCommand }" />
+                Command="{Binding OpenEstimationsPageCommand }" />
 
             <Button
                 Margin="10"
@@ -55,7 +55,7 @@
                 Text="Settings"
                 SemanticProperties.Hint="Open the Settings Toolset"
                 HorizontalOptions="FillAndExpand" 
-                Command="{Binding OpenCalculatorsPageCommand }" />
+                Command="{Binding OpenSettingsPageCommand }" />
         </VerticalStackLayout>
         
     </VerticalStackLayout>
