@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Models.Entities
 {
-    public interface IConverter : ITool
+    public class Equipment
     {
-        public ConverterType ConverterType { get; }
     }
 }

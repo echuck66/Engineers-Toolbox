@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Models.Enums
 {
-    public interface ICalculator : ITool
+    public enum FuelUnits
     {
-        CalculatorType CalculatorType { get; }
+        Gallon,
+        Liter
     }
 }

@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EngineersToolbox.Models.Enums;
 
 namespace EngineersToolbox.Models
 {
-    public enum ConverterType
+    public interface IConverter : ITool
     {
-        Base64,
-        Distance,
-        NumberBase,
-        Angle,
-        Area,
-        Pressure
+        public ConverterType ConverterType { get; }
     }
 }

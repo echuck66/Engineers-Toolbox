@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Models.Entities
 {
-    public enum CalculatorType
+    public class Address
     {
-        Payment,
-        Interest,
-        FuelEconomy
     }
 }

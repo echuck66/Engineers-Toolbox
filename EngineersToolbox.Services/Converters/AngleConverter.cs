@@ -1,4 +1,5 @@
 ﻿using EngineersToolbox.Models;
+using EngineersToolbox.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,22 @@ namespace EngineersToolbox.Services.Converters
         {
             _toolType = ToolType.Converter;
             _convertType = ConverterType.Angle;
+        }
+
+        public decimal GetDegrees(decimal radians)
+        {
+            double dblRadians = Convert.ToDouble(radians);
+            double degrees = (180 / Math.PI) * dblRadians;
+
+            return Convert.ToDecimal(degrees);
+        }
+
+        public decimal GetRadians(decimal degrees)
+        {
+            double dblDegrees = Convert.ToDouble(degrees);
+            double radians = (Math.PI / 180) * dblDegrees;
+
+            return Convert.ToDecimal(radians);
         }
     }
 }
