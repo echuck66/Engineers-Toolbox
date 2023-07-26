@@ -9,14 +9,14 @@ using System.Diagnostics;
 
 namespace EngineersToolbox.ViewModels
 {
-    public partial class AreaConverterViewModel : ToolboxBaseViewModel
+    public partial class VolumeConverterViewModel : ToolboxBaseViewModel
     {
-        private AreaConverter _converter;
+        private VolumeConverter _converter;
 
-        public AreaConverterViewModel()
+        public VolumeConverterViewModel()
         {
-            _converter = new AreaConverter();
-            Title = "Area Conversion";
+            _converter = new VolumeConverter();
+            Title = "Volume Conversion";
             Bind();
         }
 
@@ -24,22 +24,22 @@ namespace EngineersToolbox.ViewModels
         private decimal value;
 
         [ObservableProperty]
-        private AreaUnits valueUnits;
+        private VolumeUnits valueUnits;
 
         [ObservableProperty]
         private decimal convertedValue;
 
         [ObservableProperty]
-        private AreaUnits convertedValueUnits;
+        private VolumeUnits convertedValueUnits;
 
         [ObservableProperty]
-        private AreaUnitsSelector valueUnitsSelector;
+        private VolumeUnitsSelector valueUnitsSelector;
 
         [ObservableProperty]
-        private AreaUnitsSelector convertedValueUnitsSelector;
+        private VolumeUnitsSelector convertedValueUnitsSelector;
 
-        public ObservableCollection<AreaUnitsSelector> ValueUnitsOptions { get; set; }
-        public ObservableCollection<AreaUnitsSelector> ConversionUnitsOptions { get; set; }
+        public ObservableCollection<VolumeUnitsSelector> ValueUnitsOptions { get; set; }
+        public ObservableCollection<VolumeUnitsSelector> ConversionUnitsOptions { get; set; }
 
         [RelayCommand]
         public async Task ConvertValue()
@@ -55,35 +55,35 @@ namespace EngineersToolbox.ViewModels
 
                 switch (ConvertedValueUnits)
                 {
-                    case AreaUnits.SquareInch:
-                        ConvertedValue = _converter.GetSquareInches(Value, ValueUnits);
+                    case VolumeUnits.Pint:
+                        ConvertedValue = _converter.GetPints(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareFoot:
-                        ConvertedValue = _converter.GetSquareFeet(Value, ValueUnits);
+                    case VolumeUnits.Milliliter:
+                        ConvertedValue = _converter.GetMilliliters(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareYard:
-                        ConvertedValue = _converter.GetSquareYards(Value, ValueUnits);
+                    case VolumeUnits.Liter:
+                        ConvertedValue = _converter.GetLiters(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareMile:
-                        ConvertedValue = _converter.GetSquareMiles(Value, ValueUnits);
+                    case VolumeUnits.Gallon:
+                        ConvertedValue = _converter.GetGallons(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareMillimeter:
-                        ConvertedValue = _converter.GetSquareMillimeters(Value, ValueUnits);
+                    case VolumeUnits.CubicFoot:
+                        ConvertedValue = _converter.GetCubicFeet(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareCentimeter:
-                        ConvertedValue = _converter.GetSquareCentimeters(Value, ValueUnits);
+                    case VolumeUnits.CubicCentimeter:
+                        ConvertedValue = _converter.GetCubicCentimeters(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareKilometer:
-                        ConvertedValue = _converter.GetSquareKilometers(Value, ValueUnits);
+                    case VolumeUnits.CubicInch:
+                        ConvertedValue = _converter.GetCubicInches(Value, ValueUnits);
                         break;
-                    case AreaUnits.SquareMeter:
-                        ConvertedValue = _converter.GetSquareMeters(Value, ValueUnits);
+                    case VolumeUnits.CubicMeter:
+                        ConvertedValue = _converter.GetCubicMeters(Value, ValueUnits);
                         break;
-                    case AreaUnits.Acre:
-                        ConvertedValue = _converter.GetAcres(Value, ValueUnits);
+                    case VolumeUnits.Quart:
+                        ConvertedValue = _converter.GetQuarts(Value, ValueUnits);
                         break;
-                    case AreaUnits.Hectare:
-                        ConvertedValue = _converter.GetHectare(Value, ValueUnits);
+                    case VolumeUnits.CubicYard:
+                        ConvertedValue = _converter.GetCubicYards(Value, ValueUnits);
                         break;
 
                 }

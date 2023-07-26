@@ -21,5 +21,137 @@ namespace EngineersToolbox.Services.Converters
             _toolType = ToolType.Converter;
             _convertType = ConverterType.Mass;
         }
+
+        public decimal GetGrams(decimal value, MassUnits units)
+        {
+            decimal convertedValue = 0;
+            switch (units)
+            {
+                case MassUnits.Gram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Kilogram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ton:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Pound:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ounce:
+                    convertedValue = value;
+                    break;
+                
+            }
+
+            return convertedValue;
+        }
+
+        public decimal GetKilograms(decimal value, MassUnits units)
+        {
+            decimal convertedValue = 0;
+            switch (units)
+            {
+                case MassUnits.Gram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Kilogram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ton:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Pound:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ounce:
+                    convertedValue = value;
+                    break;
+
+            }
+
+            return convertedValue;
+        }
+
+        public decimal GetTons(decimal value, MassUnits units)
+        {
+            decimal convertedValue = 0;
+            switch (units)
+            {
+                case MassUnits.Gram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Kilogram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ton:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Pound:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ounce:
+                    convertedValue = value;
+                    break;
+
+            }
+
+            return convertedValue;
+        }
+
+        public decimal GetPounds(decimal value, MassUnits units)
+        {
+            decimal convertedValue = 0;
+            switch (units)
+            {
+                case MassUnits.Gram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Kilogram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ton:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Pound:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ounce:
+                    convertedValue = value;
+                    break;
+
+            }
+
+            return convertedValue;
+        }
+
+        public decimal GetOunces(decimal value, MassUnits units)
+        {
+            decimal convertedValue = 0;
+            switch (units)
+            {
+                case MassUnits.Gram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Kilogram:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ton:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Pound:
+                    convertedValue = value;
+                    break;
+                case MassUnits.Ounce:
+                    convertedValue = value;
+                    break;
+
+            }
+
+            return convertedValue;
+        }
+
+
     }
 }

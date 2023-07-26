@@ -20,5 +20,29 @@
                         Size="43"/>
             </Image.Source>
         </Image>
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto" Padding="15">
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Value"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Margin="0,0,0,3" Text="Convert To"  FontAttributes="Bold"/>
+
+            <Entry Margin="5,0,0,0"  Grid.Row="1" Grid.Column="0" HeightRequest="45" Text="{Binding Value }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ValueUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ValueUnitsSelector}" />
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="2" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ConvertedValueUnitsSelector}" />
+
+            <Button
+                    Margin="10,10,0,0"
+                    x:Name="ConvertValueBtn"
+                    Text="Convert"
+                    SemanticProperties.Hint="Convert Value"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding ConvertValueCommand }"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3"/>
+
+
+
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:E}'}" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

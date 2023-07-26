@@ -14,6 +14,7 @@ namespace EngineersToolbox.Models.Enums
         Angle,
         Area,
         Pressure,
-        Mass
+        Mass,
+        Volume
     }
 }

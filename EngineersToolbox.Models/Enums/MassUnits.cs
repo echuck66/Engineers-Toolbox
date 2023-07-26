@@ -9,6 +9,9 @@ namespace EngineersToolbox.Models.Enums
     public enum MassUnits
     {
         Gram,
-        Kilogram
+        Kilogram,
+        Ton,
+        Pound,
+        Ounce
     }
 }

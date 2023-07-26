@@ -153,6 +153,28 @@ namespace EngineersToolbox.ViewModels
         }
 
         [RelayCommand]
+        private async Task OpenVolumeConverterPage()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                await Shell.Current.GoToAsync(nameof(VolumeConverterPage));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"  {ex.Message}");
+                await AppShell.Alert(ex.Message);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
         private async Task OpenPressureConverterPage()
         {
             if (IsBusy)

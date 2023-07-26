@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace EngineersToolbox.Models.Selectors
 {
-    public class FuelEconomyUnitsSelector
+    public class PressureUnitsSelector
     {
-        public FuelUnits FuelUnitsComponent { get; set; }
-
-        public DistanceUnits DistanceUnitsComponent { get; set; }
-
         public string UnitsName { get; set; }
 
-        
+        public PressureUnits Units { get; set; }
     }
 }

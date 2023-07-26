@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace EngineersToolbox.Models.Selectors
 {
-    public class MassUnitsSelector
+    public class AreaUnitsSelector
     {
         public string UnitsName { get; set; }
 
-        public MassUnits Units { get; set; }
+        public AreaUnits Units { get; set; }
     }
 }

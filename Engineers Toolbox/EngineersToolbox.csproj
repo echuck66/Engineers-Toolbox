@@ -111,6 +111,9 @@
 	  <MauiXaml Update="Views\Converters\MassConverterPage .xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\VolumeConverterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EstimationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

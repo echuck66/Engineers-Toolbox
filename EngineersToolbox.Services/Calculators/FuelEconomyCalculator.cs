@@ -21,5 +21,6 @@ namespace EngineersToolbox.Services.Calculators
             _toolType = ToolType.Calculator;
             _calculatorType = CalculatorType.FuelEconomy;
         }
+
     }
 }

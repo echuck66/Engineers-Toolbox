@@ -9,9 +9,9 @@ namespace EngineersToolbox.Models.Enums
     public enum AreaUnits
     {
         SquareInch,
-        SquareMile,
-        SquareYard,
         SquareFoot,
+        SquareYard,
+        SquareMile,
         SquareMillimeter,
         SquareCentimeter,
         SquareMeter,
