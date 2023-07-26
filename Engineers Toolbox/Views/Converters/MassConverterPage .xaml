@@ -15,7 +15,7 @@
             <Image.Source>
                 <FontImageSource
                         FontFamily="FontAwesomeSolid"
-                        Glyph="{StaticResource area}"
+                        Glyph="{StaticResource scale}"
                         Color="{StaticResource Primary}"
                         Size="43"/>
             </Image.Source>

@@ -17,5 +17,6 @@
     <x:String x:Key="pressure">&#xf496;</x:String>
     <x:String x:Key="code">&#xf121;</x:String>
     <x:String x:Key="gear">&#xf013;</x:String>
+    <x:String x:Key="scale">&#xf24e;</x:String>
 
 </ResourceDictionary>
