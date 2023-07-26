@@ -46,7 +46,7 @@
 
 
 
-            <Label VerticalOptions="Center" Grid.ColumnSpan="2" Grid.Row="5" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding Payment }" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.ColumnSpan="2" Grid.Row="5" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding Payment, StringFormat='{0:C}'}" HorizontalTextAlignment="End" />
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

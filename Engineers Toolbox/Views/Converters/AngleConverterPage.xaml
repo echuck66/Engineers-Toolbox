@@ -39,7 +39,7 @@
                     Grid.Row="2"
                     Grid.ColumnSpan="2"/>
 
-            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue }" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:E}'}" HorizontalTextAlignment="End" />
             <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
         </Grid>
     </VerticalStackLayout>
