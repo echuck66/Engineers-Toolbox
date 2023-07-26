@@ -17,7 +17,7 @@ namespace EngineersToolbox.ViewModels
         public DistanceConverterViewModel()
         {
             _converter = new DistanceConverter();
-            Title = "Distance Converter";
+            Title = "Distance Conversion";
             Bind();
         }
 

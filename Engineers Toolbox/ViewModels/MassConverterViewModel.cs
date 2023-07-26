@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace EngineersToolbox.ViewModels
 {
-    public partial class PressureConverterViewModel : ToolboxBaseViewModel
+    public partial class MassConverterViewModel : ToolboxBaseViewModel
     {
-        private PressureConverter _converter;
+        private MassConverter _converter;
 
-        public PressureConverterViewModel()
+        public MassConverterViewModel()
         {
-            _converter = new PressureConverter();
-            Title = "Pressure Conversion";
+            _converter = new MassConverter();
+            Title = "Mass Conversion";
             Bind();
         }
 

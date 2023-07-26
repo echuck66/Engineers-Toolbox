@@ -13,6 +13,7 @@ namespace EngineersToolbox.Models.Enums
         NumberBase,
         Angle,
         Area,
-        Pressure
+        Pressure,
+        Mass
     }
 }

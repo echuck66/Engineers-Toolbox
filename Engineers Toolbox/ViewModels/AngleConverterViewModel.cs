@@ -16,7 +16,7 @@ namespace EngineersToolbox.ViewModels
         public AngleConverterViewModel()
         {
             _converter = new AngleConverter();
-            Title = "Angle Converter";
+            Title = "Angle Conversion";
             Bind();
         }
 

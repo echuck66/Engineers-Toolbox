@@ -108,6 +108,9 @@
 	  <MauiXaml Update="Views\CalculatorsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\MassConverterPage .xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EstimationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -155,6 +158,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\Converters\MassConverterPage .xaml.cs">
+	    <DependentUpon>MassConverterPage .xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\EstimationPage.xaml.cs">
 	    <DependentUpon>EstimationPage.xaml</DependentUpon>
 	  </Compile>
