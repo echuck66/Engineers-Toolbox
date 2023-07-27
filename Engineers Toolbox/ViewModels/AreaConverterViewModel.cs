@@ -125,7 +125,42 @@ namespace EngineersToolbox.ViewModels
 
         public void Bind()
         {
+            ValueUnitsOptions = new ObservableCollection<AreaUnitsSelector>()
+            {
+                new AreaUnitsSelector() { Units = AreaUnits.Acre, UnitsName = "ac" },
+                new AreaUnitsSelector() { Units = AreaUnits.Hectare, UnitsName = "ha" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "cm2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "ft2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "in2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "km2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "m2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "mi2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "mm2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "yd2" }
+            };
+            ConversionUnitsOptions = new ObservableCollection<AreaUnitsSelector>()
+            {
+                new AreaUnitsSelector() { Units = AreaUnits.Acre, UnitsName = "ac" },
+                new AreaUnitsSelector() { Units = AreaUnits.Hectare, UnitsName = "ha" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "cm2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "ft2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "in2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "km2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "m2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "mi2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "mm2" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "yd2" }
+            };
 
+            if (ValueUnitsSelector == null)
+            {
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == AreaUnits.SquareFoot);
+            }
+
+            if (ConvertedValueUnitsSelector == null)
+            {
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == AreaUnits.SquareMeter);
+            }
         }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using EngineersToolbox.Models;
 using EngineersToolbox.Models.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace EngineersToolbox.Services.Converters
 {
@@ -21,7 +17,6 @@ namespace EngineersToolbox.Services.Converters
             _convertType = ConverterType.Area;
         }
 
-
         public decimal GetSquareInches(decimal value, AreaUnits units)
         {
             decimal convertedValue = 0;
@@ -31,31 +26,31 @@ namespace EngineersToolbox.Services.Converters
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value * 10M;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value * 1000M;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value * 1000000M;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value * 25.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value * 304.8M;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREINCH_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREINCH_FACTOR;
                     break;
             }
 
@@ -68,34 +63,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value * 10M;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value * 1000M;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value * 25.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value * 304.8M;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREFOOT_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREFOOT_FACTOR;
                     break;
             }
 
@@ -108,34 +103,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value * 10M;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value * 25.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value * 304.8M;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREYARD_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREYARD_FACTOR;
                     break;
             }
 
@@ -148,34 +143,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value * 25.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value * 304.8M;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREMILE_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREMILE_FACTOR;
                     break;
             }
 
@@ -188,34 +183,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value * 304.8M;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREMILLIMETER_FACTOR;
                     break;
             }
 
@@ -228,34 +223,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value * 914.4M;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUARECENTIMETER_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUARECENTIMETER_FACTOR;
                     break;
             }
 
@@ -268,34 +263,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
                     convertedValue = value;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREMETER_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREMETER_FACTOR;
                     break;
             }
 
@@ -308,34 +303,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_SQUAREMILLIMETER_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value;
+                    convertedValue = value ;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.HECTARE_TO_SQUAREKILOMETER_FACTOR;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_SQUAREKILOMETER_FACTOR;
                     break;
             }
 
@@ -348,34 +343,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_HECTARE_FACTOR;
                     break;
                 case AreaUnits.Hectare:
                     convertedValue = value;
                     break;
                 case AreaUnits.Acre:
-                    convertedValue = value * 1609344M;
+                    convertedValue = value * ConversionConstants.ACRE_TO_HECTARE_FACTOR;
                     break;
             }
 
@@ -388,31 +383,31 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case AreaUnits.SquareInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREINCH_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareMile:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILE_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREYARD_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREFOOT_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareMillimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMILLIMETER_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUARECENTIMETER_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREMETER_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.SquareKilometer:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.SQUAREKILOMETER_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.Hectare:
-                    convertedValue = value;
+                    convertedValue = value = ConversionConstants.HECTARE_TO_ACRE_FACTOR;
                     break;
                 case AreaUnits.Acre:
                     convertedValue = value;
