@@ -30,31 +30,31 @@ namespace EngineersToolbox.Services.Converters
                     convertedValue = value;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_PINT_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_PINT_FACTOR;
                     break;
             }
 
@@ -67,34 +67,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.Quart:
                     convertedValue = value;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_QUART_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_QUART_FACTOR;
                     break;
             }
 
@@ -107,34 +107,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
                     convertedValue = value;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_GALLON_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_GALLON_FACTOR;
                     break;
             }
 
@@ -147,34 +147,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
                     convertedValue = value;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_CUBICINCH_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_CUBICINCH_FACTOR;
                     break;
             }
 
@@ -187,34 +187,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
                     convertedValue = value;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_CUBICFOOT_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_CUBICFOOT_FACTOR;
                     break;
             }
 
@@ -227,34 +227,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
                     convertedValue = value;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_CUBICYARD_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_CUBICYARD_FACTOR;
                     break;
             }
 
@@ -267,34 +267,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
                     convertedValue = value;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_MILLILITER_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_LITER_FACTOR;
                     break;
             }
 
@@ -307,34 +307,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.Liter:
                     convertedValue = value;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_LITER_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_LITER_FACTOR;
                     break;
             }
 
@@ -347,34 +347,34 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_CUBICCENTIMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
                     convertedValue = value;
                     break;
                 case VolumeUnits.CubicMeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICMETER_TO_CUBICCENTIMETER_FACTOR;
                     break;
             }
 
@@ -387,31 +387,31 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case VolumeUnits.Pint:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.PINT_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.Quart:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.QUART_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.Gallon:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.GALLON_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicInch:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICINCH_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicFoot:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICFOOT_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicYard:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICYARD_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.Milliliter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.MILLILITER_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.Liter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.LITER_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicCentimeter:
-                    convertedValue = value;
+                    convertedValue = value * ConversionConstants.CUBICCENTIMETER_TO_CUBICMETER_FACTOR;
                     break;
                 case VolumeUnits.CubicMeter:
                     convertedValue = value;

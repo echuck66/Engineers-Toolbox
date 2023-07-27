@@ -317,6 +317,19 @@ namespace EngineersToolbox.Models
         public const decimal CUBICFOOT_TO_QUART_FACTOR = 29.922077922M;
         public const decimal CUBICINCH_TO_QUART_FACTOR = 0.0173160173M;
 
+        public const decimal CUBICMETER_TO_PINT_FACTOR = 2113.3764189M;
+        public const decimal CUBICKILOMETER_TO_PINT_FACTOR = 2113376418865M;
+        public const decimal CUBICCENTIMETER_TO_PINT_FACTOR = 0.0021133764M;
+        public const decimal CUBICMILLIMETER_TO_PINT_FACTOR = 0.0000021134M;
+        public const decimal LITER_TO_PINT_FACTOR = 2.1133764189M;
+        public const decimal MILLILITER_TO_PINT_FACTOR = 0.0021133764M;
+        public const decimal GALLON_TO_PINT_FACTOR = 8M;
+        public const decimal QUART_TO_PINT_FACTOR = 2M;
+        public const decimal CUBICMILE_TO_PINT_FACTOR = 8808937179429M;
+        public const decimal CUBICYARD_TO_PINT_FACTOR = 1615.7922078M;
+        public const decimal CUBICFOOT_TO_PINT_FACTOR = 59.844155844M;
+        public const decimal CUBICINCH_TO_PINT_FACTOR = 0.0346320346M;
+
         public const decimal CUBICMETER_TO_CUBICMILE_FACTOR = 2.399127585E-10M;
         public const decimal CUBICKILOMETER_TO_CUBICMILE_FACTOR = 0.2399127586M;
         public const decimal CUBICCENTIMETER_TO_CUBICMILE_FACTOR = 2.399127585E-16M;
