@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ namespace EngineersToolbox.Models
 {
     public static class ConversionConstants
     {
+        // DISTANCE FACTORS
         public const decimal METER_TO_FOOT_FACTOR = 3.280839895M;
         public const decimal KILOMETER_TO_FOOT_FACTOR = 3280.839895M;
         public const decimal CENTIMETER_TO_FOOT_FACTOR = 0.032808399M;
@@ -109,6 +111,7 @@ namespace EngineersToolbox.Models
         public const decimal YARD_TO_INCH_FACTOR = 36M;
         public const decimal FOOT_TO_INCH_FACTOR = 12M;
 
+        // AREA FACTORS
         public const decimal SQUAREKILOMETER_TO_SQUAREMETER_FACTOR = 1000000M;
         public const decimal SQUARECENTIMETER_TO_SQUAREMETER_FACTOR = 0.0001M;
         public const decimal SQUAREMILLIMETER_TO_SQUAREMETER_FACTOR = 0.000001M;
@@ -209,7 +212,162 @@ namespace EngineersToolbox.Models
         public const decimal SQUAREFOOT_TO_ACRE_FACTOR = 0.0000229568M;
         public const decimal SQUAREINCH_TO_ACRE_FACTOR = 1.594225079E-7M;
 
+        // VOLUME FACTORS
+        public const decimal CUBICKILOMETER_TO_CUBICMETER_FACTOR = 1000000000M;
+        public const decimal CUBICCENTIMETER_TO_CUBICMETER_FACTOR = 0.000001M;
+        public const decimal CUBICMILLIMETER_TO_CUBICMETER_FACTOR = 1.0E-9M;
+        public const decimal LITER_TO_CUBICMETER_FACTOR = 0.001M;
+        public const decimal MILLILITER_TO_CUBICMETER_FACTOR = 0.000001M;
+        public const decimal GALLON_TO_CUBICMETER_FACTOR = 0.0037854118M;
+        public const decimal QUART_TO_CUBICMETER_FACTOR = 0.0009463529M;
+        public const decimal PINT_TO_CUBICMETER_FACTOR = 0.0004731765M;
+        public const decimal CUBICMILE_TO_CUBICMETER_FACTOR = 4168181825.4M;
+        public const decimal CUBICYARD_TO_CUBICMETER_FACTOR = 0.764554858M;
+        public const decimal CUBICFOOT_TO_CUBICMETER_FACTOR = 0.0283168466M;
+        public const decimal CUBICINCH_TO_CUBICMETER_FACTOR = 0.0000163871M;
+        
+        public const decimal CUBICMETER_TO_CUBICKILOMETER_FACTOR = 1.0E-9M;
+        public const decimal CUBICCENTIMETER_TO_CUBICKILOMETER_FACTOR = 1.0E-15M;
+        public const decimal CUBICMILLIMETER_TO_CUBICKILOMETER_FACTOR = 1.0E-18M;
+        public const decimal LITER_TO_CUBICKILOMETER_FACTOR = 1.0E-12M;
+        public const decimal MILLILITER_TO_CUBICKILOMETER_FACTOR = 1.0E-15M;
+        public const decimal GALLON_TO_CUBICKILOMETER_FACTOR = 3.785411783E-12M;
+        public const decimal QUART_TO_CUBICKILOMETER_FACTOR = 9.463529459E-13M;
+        public const decimal PINT_TO_CUBICKILOMETER_FACTOR = 4.731764729E-13M;
+        public const decimal CUBICMILE_TO_CUBICKILOMETER_FACTOR = 4.1681818254M;
+        public const decimal CUBICYARD_TO_CUBICKILOMETER_FACTOR = 7.645548579E-10M;
+        public const decimal CUBICFOOT_TO_CUBICKILOMETER_FACTOR = 2.831684659E-11M;
+        public const decimal CUBICINCH_TO_CUBICKILOMETER_FACTOR = 1.6387064E-14M;
 
+        public const decimal CUBICMETER_TO_CUBICCENTIMETER_FACTOR = 1000000M;
+        public const decimal CUBICKILOMETER_TO_CUBICCENTIMETER_FACTOR = 1000000000000000M;
+        public const decimal CUBICMILLIMETER_TO_CUBICCENTIMETER_FACTOR = 0.001M;
+        public const decimal LITER_TO_CUBICCENTIMETER_FACTOR = 1000M;
+        public const decimal MILLILITER_TO_CUBICCENTIMETER_FACTOR = 1M;
+        public const decimal GALLON_TO_CUBICCENTIMETER_FACTOR = 3785.411784M;
+        public const decimal QUART_TO_CUBICCENTIMETER_FACTOR = 946.352946M;
+        public const decimal PINT_TO_CUBICCENTIMETER_FACTOR = 473.176473M;
+        public const decimal CUBICMILE_TO_CUBICCENTIMETER_FACTOR = 4168181825440540M;
+        public const decimal CUBICYARD_TO_CUBICCENTIMETER_FACTOR = 764554.85798M;
+        public const decimal CUBICFOOT_TO_CUBICCENTIMETER_FACTOR = 28316.846592M;
+        public const decimal CUBICINCH_TO_CUBICCENTIMETER_FACTOR = 16.387064M;
+
+        public const decimal CUBICMETER_TO_CUBICMILLIMETER_FACTOR = 1000000000M;
+        public const decimal CUBICKILOMETER_TO_CUBICMILLIMETER_FACTOR = 1000000000000000000M;
+        public const decimal CUBICCENTIMETER_TO_CUBICMILLIMETER_FACTOR = 1000M;
+        public const decimal LITER_TO_CUBICMILLIMETER_FACTOR = 1000000M;
+        public const decimal MILLILITER_TO_CUBICMILLIMETER_FACTOR = 1000M;
+        public const decimal GALLON_TO_CUBICMILLIMETER_FACTOR = 3785411.784M;
+        public const decimal QUART_TO_CUBICMILLIMETER_FACTOR = 946352.946M;
+        public const decimal PINT_TO_CUBICMILLIMETER_FACTOR = 473176.473M;
+        public const decimal CUBICMILE_TO_CUBICMILLIMETER_FACTOR = 4168181825440539600M;
+        public const decimal CUBICYARD_TO_CUBICMILLIMETER_FACTOR = 764554857.98M;
+        public const decimal CUBICFOOT_TO_CUBICMILLIMETER_FACTOR = 28316846.592M;
+        public const decimal CUBICINCH_TO_CUBICMILLIMETER_FACTOR = 16387.064M;
+
+        public const decimal CUBICMETER_TO_LITER_FACTOR = 1000M;
+        public const decimal CUBICKILOMETER_TO_LITER_FACTOR = 1000000000000M;
+        public const decimal CUBICCENTIMETER_TO_LITER_FACTOR = 0.001M;
+        public const decimal CUBICMILLIMETER_TO_LITER_FACTOR = 0.000001M;
+        public const decimal MILLILITER_TO_LITER_FACTOR = 0.001M;
+        public const decimal GALLON_TO_LITER_FACTOR = 3.785411784M;
+        public const decimal QUART_TO_LITER_FACTOR = 0.946352946M;
+        public const decimal PINT_TO_LITER_FACTOR = 0.473176473M;
+        public const decimal CUBICMILE_TO_LITER_FACTOR = 4168181825441M;
+        public const decimal CUBICYARD_TO_LITER_FACTOR = 764.55485798M;
+        public const decimal CUBICFOOT_TO_LITER_FACTOR = 28.316846592M;
+        public const decimal CUBICINCH_TO_LITER_FACTOR = 0.016387064M;
+
+        public const decimal CUBICMETER_TO_MILLILITER_FACTOR = 1000000M;
+        public const decimal CUBICKILOMETER_TO_MILLILITER_FACTOR = 1000000000000000M;
+        public const decimal CUBICCENTIMETER_TO_MILLILITER_FACTOR = 1M;
+        public const decimal CUBICMILLIMETER_TO_MILLILITER_FACTOR = 0.001M;
+        public const decimal LITER_TO_MILLILITER_FACTOR = 1000M;
+        public const decimal GALLON_TO_MILLILITER_FACTOR = 3785.411784M;
+        public const decimal QUART_TO_MILLILITER_FACTOR = 946.352946M;
+        public const decimal PINT_TO_MILLILITER_FACTOR = 473.176473M;
+        public const decimal CUBICMILE_TO_MILLILITER_FACTOR = 4168181825440540M;
+        public const decimal CUBICYARD_TO_MILLILITER_FACTOR = 764554.85798M;
+        public const decimal CUBICFOOT_TO_MILLILITER_FACTOR = 28316.846592M;
+        public const decimal CUBICINCH_TO_MILLILITER_FACTOR = 16.387064M;
+
+        public const decimal CUBICMETER_TO_GALLON_FACTOR = 264.17205236M;
+        public const decimal CUBICKILOMETER_TO_GALLON_FACTOR = 264172052358M;
+        public const decimal CUBICCENTIMETER_TO_GALLON_FACTOR = 0.0002641721M;
+        public const decimal CUBICMILLIMETER_TO_GALLON_FACTOR = 2.641720523E-7M;
+        public const decimal LITER_TO_GALLON_FACTOR = 0.2641720524M;
+        public const decimal MILLILITER_TO_GALLON_FACTOR = 0.0002641721M;
+        public const decimal QUART_TO_GALLON_FACTOR = 0.25M;
+        public const decimal PINT_TO_GALLON_FACTOR = 0.125M;
+        public const decimal CUBICMILE_TO_GALLON_FACTOR = 1101117147429M;
+        public const decimal CUBICYARD_TO_GALLON_FACTOR = 201.97402597M;
+        public const decimal CUBICFOOT_TO_GALLON_FACTOR = 7.4805194805M;
+        public const decimal CUBICINCH_TO_GALLON_FACTOR = 0.0043290043M;
+
+        public const decimal CUBICMETER_TO_QUART_FACTOR = 1056.6882094M;
+        public const decimal CUBICKILOMETER_TO_QUART_FACTOR = 1056688209433M;
+        public const decimal CUBICCENTIMETER_TO_QUART_FACTOR = 0.0010566882M;
+        public const decimal CUBICMILLIMETER_TO_QUART_FACTOR = 0.0000010567M;
+        public const decimal LITER_TO_QUART_FACTOR = 1.0566882094M;
+        public const decimal MILLILITER_TO_QUART_FACTOR = 0.0010566882M;
+        public const decimal GALLON_TO_QUART_FACTOR = 4M;
+        public const decimal PINT_TO_QUART_FACTOR = 0.5M;
+        public const decimal CUBICMILE_TO_QUART_FACTOR = 4404468589714M;
+        public const decimal CUBICYARD_TO_QUART_FACTOR = 807.8961039M;
+        public const decimal CUBICFOOT_TO_QUART_FACTOR = 29.922077922M;
+        public const decimal CUBICINCH_TO_QUART_FACTOR = 0.0173160173M;
+
+        public const decimal CUBICMETER_TO_CUBICMILE_FACTOR = 2.399127585E-10M;
+        public const decimal CUBICKILOMETER_TO_CUBICMILE_FACTOR = 0.2399127586M;
+        public const decimal CUBICCENTIMETER_TO_CUBICMILE_FACTOR = 2.399127585E-16M;
+        public const decimal CUBICMILLIMETER_TO_CUBICMILE_FACTOR = 2.399127585E-19M;
+        public const decimal LITER_TO_CUBICMILE_FACTOR = 2.399127585E-13M;
+        public const decimal MILLILITER_TO_CUBICMILE_FACTOR = 2.399127585E-16M;
+        public const decimal GALLON_TO_CUBICMILE_FACTOR = 9.081685834E-13M;
+        public const decimal QUART_TO_CUBICMILE_FACTOR = 2.270421458E-13M;
+        public const decimal PINT_TO_CUBICMILE_FACTOR = 1.135210729E-13M;
+        public const decimal CUBICYARD_TO_CUBICMILE_FACTOR = 1.83426465E-10M;
+        public const decimal CUBICFOOT_TO_CUBICMILE_FACTOR = 6.79357278E-12M;
+        public const decimal CUBICINCH_TO_CUBICMILE_FACTOR = 3.931465729E-15M;
+
+        public const decimal CUBICMETER_TO_CUBICYARD_FACTOR = 1.3079506193M;
+        public const decimal CUBICKILOMETER_TO_CUBICYARD_FACTOR = 1307950619.3M;
+        public const decimal CUBICCENTIMETER_TO_CUBICYARD_FACTOR = 0.000001308M;
+        public const decimal CUBICMILLIMETER_TO_CUBICYARD_FACTOR = 1.307950619E-9M;
+        public const decimal LITER_TO_CUBICYARD_FACTOR = 0.0013079506M;
+        public const decimal MILLILITER_TO_CUBICYARD_FACTOR = 0.000001308M;
+        public const decimal GALLON_TO_CUBICYARD_FACTOR = 0.0049511317M;
+        public const decimal QUART_TO_CUBICYARD_FACTOR = 0.0012377829M;
+        public const decimal PINT_TO_CUBICYARD_FACTOR = 0.0006188915M;
+        public const decimal CUBICMILE_TO_CUBICYARD_FACTOR = 5451776000M;
+        public const decimal CUBICFOOT_TO_CUBICYARD_FACTOR = 0.037037037M;
+        public const decimal CUBICINCH_TO_CUBICYARD_FACTOR = 0.0000214335M;
+
+        public const decimal CUBICMETER_TO_CUBICFOOT_FACTOR = 35.314666721M;
+        public const decimal CUBICKILOMETER_TO_CUBICFOOT_FACTOR = 35314666721M;
+        public const decimal CUBICCENTIMETER_TO_CUBICFOOT_FACTOR = 0.0000353147M;
+        public const decimal CUBICMILLIMETER_TO_CUBICFOOT_FACTOR = 3.531466672E-8M;
+        public const decimal LITER_TO_CUBICFOOT_FACTOR = 0.0353146667M;
+        public const decimal MILLILITER_TO_CUBICFOOT_FACTOR = 0.0000353147M;
+        public const decimal GALLON_TO_CUBICFOOT_FACTOR = 0.1336805556M;
+        public const decimal QUART_TO_CUBICFOOT_FACTOR = 0.0334201389M;
+        public const decimal PINT_TO_CUBICFOOT_FACTOR = 0.0167100694M;
+        public const decimal CUBICMILE_TO_CUBICFOOT_FACTOR = 147197952000M;
+        public const decimal CUBICYARD_TO_CUBICFOOT_FACTOR = 27M;
+        public const decimal CUBICINCH_TO_CUBICFOOT_FACTOR = 0.0005787037M;
+
+        public const decimal CUBICMETER_TO_CUBICINCH_FACTOR = 61023.744095M;
+        public const decimal CUBICKILOMETER_TO_CUBICINCH_FACTOR = 61023744094732M;
+        public const decimal CUBICCENTIMETER_TO_CUBICINCH_FACTOR = 0.0610237441M;
+        public const decimal CUBICMILLIMETER_TO_CUBICINCH_FACTOR = 0.0000610237M;
+        public const decimal LITER_TO_CUBICINCH_FACTOR = 61.023744095M;
+        public const decimal MILLILITER_TO_CUBICINCH_FACTOR = 0.0610237441M;
+        public const decimal GALLON_TO_CUBICINCH_FACTOR = 231M;
+        public const decimal QUART_TO_CUBICINCH_FACTOR = 57.75M;
+        public const decimal PINT_TO_CUBICINCH_FACTOR = 28.875M;
+        public const decimal CUBICMILE_TO_CUBICINCH_FACTOR = 254358061055996M;
+        public const decimal CUBICYARD_TO_CUBICINCH_FACTOR = 46656M;
+        public const decimal CUBICFOOT_TO_CUBICINCH_FACTOR = 1728M;
 
     }
 }
