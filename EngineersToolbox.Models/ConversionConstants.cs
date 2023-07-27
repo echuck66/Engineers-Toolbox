@@ -54,7 +54,7 @@ namespace EngineersToolbox.Models
         public const decimal CENTIMETER_TO_MILLIMETER_FACTOR = 10M;
         public const decimal MICROMETER_TO_MILLIMETER_FACTOR = 0.001M;
         public const decimal NANOMETER_TO_MILLIMETER_FACTOR = 0.000001M;
-        public const decimal MILE_TO_MILLIMETER_FACTOR = 1609350M;
+        public const decimal MILE_TO_MILLIMETER_FACTOR = 1609344M;
         public const decimal YARD_TO_MILLIMETER_FACTOR = 914.4M;
         public const decimal FOOT_TO_MILLIMETER_FACTOR = 304.8M;
         public const decimal INCH_TO_MILLIMETER_FACTOR = 25.4M;

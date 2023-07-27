@@ -9,5 +9,6 @@ namespace EngineersToolbox.Tests
     [TestClass]
     public class AreaConverterTests
     {
+
     }
 }

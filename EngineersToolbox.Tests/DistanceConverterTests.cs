@@ -15,6 +15,7 @@ namespace EngineersToolbox.Tests
         const decimal feetInMile = 5280M;
         const decimal inchesInMeter = 39.3700787M;
         const decimal milesInKilometer = 1.609344M;
+        const decimal inchesToMeterFactor = 0.0254M;
 
         [TestMethod]
         public void GetMillimetersFromMillimeters_ReturnsMillimeters()
@@ -107,7 +108,12 @@ namespace EngineersToolbox.Tests
             decimal mi = 1M;
             decimal mm = converter.GetMillimeters(mi, Models.DistanceUnits.Mile);
 
-            decimal expectedMM = (((mi * feetInMile) * inchesInFoot) / inchesInMeter) * 1000M;
+            var expectedFT = mi * feetInMile;
+            var expectedIN = expectedFT * inchesInFoot;
+            var expectedM = expectedIN * inchesToMeterFactor;
+            var expectedMM = expectedM * 1000M;
+
+            //decimal expectedMM = (((mi * feetInMile) * inchesInFoot) / inchesInMeter) * 1000M;
 
             Assert.AreEqual(expectedMM, mm, 5);
         }

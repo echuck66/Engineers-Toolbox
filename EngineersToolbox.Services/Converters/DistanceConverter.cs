@@ -32,25 +32,25 @@ namespace EngineersToolbox.Services.Converters
                     millimeters = value;
                     break;
                 case DistanceUnits.Centimeter:
-                    millimeters = value * 10M;
+                    millimeters = value * ConversionConstants.CENTIMETER_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    millimeters = value * 1000M;
+                    millimeters = value * ConversionConstants.METER_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    millimeters = value * 1000000M;
+                    millimeters = value * ConversionConstants.KILOMETER_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    millimeters = value * 25.4M;
+                    millimeters = value * ConversionConstants.INCH_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    millimeters = value * 304.8M;
+                    millimeters = value * ConversionConstants.FOOT_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    millimeters = value * 914.4M;
+                    millimeters = value * ConversionConstants.YARD_TO_MILLIMETER_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    millimeters = value * 1609344M;
+                    millimeters = value * ConversionConstants.MILE_TO_MILLIMETER_FACTOR;
                     break;
             }
             return millimeters;
@@ -62,29 +62,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    centimeters = value / 10M;
+                    centimeters = value * ConversionConstants.MILLIMETER_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
                     centimeters = value;
                     break;
                 case DistanceUnits.Meter:
-                    centimeters = value * 100M;
+                    centimeters = value * ConversionConstants.METER_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    var meters = value * 1000M;
-                    centimeters = meters * 100M;
+                    centimeters = value * ConversionConstants.KILOMETER_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    centimeters = value * 2.54M;
+                    centimeters = value * ConversionConstants.INCH_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    centimeters = value * 30.48M;
+                    centimeters = value * ConversionConstants.FOOT_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    centimeters = value * 91.44M;
+                    centimeters = value * ConversionConstants.YARD_TO_CENTIMETER_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    centimeters = value * 160934.4M;
+                    centimeters = value * ConversionConstants.MILE_TO_CENTIMETER_FACTOR;
                     break;
             }
             return centimeters;
@@ -96,28 +95,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    meters = value / 1000M;
+                    meters = value * ConversionConstants.MILLIMETER_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    meters = value / 100M;
+                    meters = value * ConversionConstants.CENTIMETER_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Meter:
                     meters = value;
                     break;
                 case DistanceUnits.Kilometer:
-                    meters = value * 1000M;
+                    meters = value * ConversionConstants.KILOMETER_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    meters = value * 0.0254M;
+                    meters = value * ConversionConstants.INCH_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    meters = value * 0.3048M;
+                    meters = value * ConversionConstants.FOOT_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    meters = value * 0.9144M;
+                    meters = value * ConversionConstants.YARD_TO_METER_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    meters = value * 1609.344M;
+                    meters = value * ConversionConstants.MILE_TO_METER_FACTOR;
                     break;
             }
             return meters;
@@ -129,28 +128,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    kilometers = value / 1000000M;
+                    kilometers = value * ConversionConstants.MILLIMETER_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    kilometers = value / 100000M;
+                    kilometers = value * ConversionConstants.CENTIMETER_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    kilometers = value / 1000M;
+                    kilometers = value * ConversionConstants.METER_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
                     kilometers = value;
                     break;
                 case DistanceUnits.Inch:
-                    kilometers = value * 0.0000254M;
+                    kilometers = value * ConversionConstants.INCH_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    kilometers = value * 0.0003048M;
+                    kilometers = value * ConversionConstants.FOOT_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    kilometers = value * 0.0009144M;
+                    kilometers = value * ConversionConstants.YARD_TO_KILOMETER_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    kilometers = value * 1.609344M;
+                    kilometers = value * ConversionConstants.MILE_TO_KILOMETER_FACTOR;
                     break;
             }
             return kilometers;
@@ -162,28 +161,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    inches = value * 0.03937008M;
+                    inches = value * ConversionConstants.MILLIMETER_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    inches = value * 0.39370079M;
+                    inches = value * ConversionConstants.CENTIMETER_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    inches = value * 39.3700787M;
+                    inches = value * ConversionConstants.METER_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    inches = value * 39370.0787M;
+                    inches = value * ConversionConstants.KILOMETER_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Inch:
                     inches = value;
                     break;
                 case DistanceUnits.Foot:
-                    inches = value * 12M;
+                    inches = value * ConversionConstants.FOOT_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    inches = value * 36M;
+                    inches = value * ConversionConstants.YARD_TO_INCH_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    inches = value * 12M * 5280M;
+                    inches = value * ConversionConstants.MILE_TO_INCH_FACTOR;
                     break;
             }
             return inches;
@@ -195,28 +194,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    feet = value * 0.00328084M;
+                    feet = value * ConversionConstants.MILLIMETER_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    feet = value * 0.0328084M;
+                    feet = value * ConversionConstants.CENTIMETER_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    feet = value * 3.2808399M;
+                    feet = value * ConversionConstants.METER_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    feet = value * 3280.8399M;
+                    feet = value * ConversionConstants.KILOMETER_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    feet = value / 12M;
+                    feet = value * ConversionConstants.INCH_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Foot:
                     feet = value;
                     break;
                 case DistanceUnits.Yard:
-                    feet = value * 3M;
+                    feet = value * ConversionConstants.YARD_TO_FOOT_FACTOR;
                     break;
                 case DistanceUnits.Mile:
-                    feet = value * 5280M;
+                    feet = value * ConversionConstants.MILE_TO_FOOT_FACTOR;
                     break;
             }
             return feet;
@@ -228,28 +227,28 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    yards = value * 0.00109361M;
+                    yards = value * ConversionConstants.MILLIMETER_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    yards = value * 0.01093613M;
+                    yards = value * ConversionConstants.CENTIMETER_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    yards = value * 1.0936133M;
+                    yards = value * ConversionConstants.METER_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    yards = value * 1093.6133M;
+                    yards = value * ConversionConstants.KILOMETER_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    yards = value / 36M;
+                    yards = value * ConversionConstants.INCH_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    yards = value / 3M;
+                    yards = value * ConversionConstants.FOOT_TO_YARD_FACTOR;
                     break;
                 case DistanceUnits.Yard:
                     yards = value;
                     break;
                 case DistanceUnits.Mile:
-                    yards = value * 1760M;
+                    yards = value * ConversionConstants.MILE_TO_YARD_FACTOR;
                     break;
             }
             return yards;
@@ -261,25 +260,25 @@ namespace EngineersToolbox.Services.Converters
             switch (units)
             {
                 case DistanceUnits.Millimeter:
-                    miles = value * 0.00000062137M;
+                    miles = value * ConversionConstants.MILLIMETER_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Centimeter:
-                    miles = value * 0.00000621M;
+                    miles = value * ConversionConstants.CENTIMETER_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Meter:
-                    miles = value * 0.00062137M;
+                    miles = value * ConversionConstants.METER_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Kilometer:
-                    miles = value * 0.62137119M;
+                    miles = value * ConversionConstants.KILOMETER_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Inch:
-                    miles = value / 12M / 5280M;
+                    miles = value * ConversionConstants.INCH_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Foot:
-                    miles = value / 5280M;
+                    miles = value * ConversionConstants.FOOT_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Yard:
-                    miles = value / 3M / 5280M;
+                    miles = value * ConversionConstants.YARD_TO_MILE_FACTOR;
                     break;
                 case DistanceUnits.Mile:
                     miles = value;

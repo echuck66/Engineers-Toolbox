@@ -8,7 +8,6 @@ namespace EngineersToolbox.Services.Converters
     {
         private ToolType _toolType;
         public ToolType ToolType { get { return _toolType; } }
-
         private ConverterType _convertType;
         public ConverterType ConverterType { get { return _convertType; } }
         public AreaConverter()
