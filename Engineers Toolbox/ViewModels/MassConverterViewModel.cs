@@ -67,10 +67,16 @@ namespace EngineersToolbox.ViewModels
                     case MassUnits.Pound:
                         ConvertedValue = _converter.GetPounds(Value, ValueUnits);
                         break;
-                    case MassUnits.Ton:
-                        ConvertedValue = _converter.GetTons(Value, ValueUnits);
+                    case MassUnits.MetricTon:
+                        ConvertedValue = _converter.GetMetricTons(Value, ValueUnits);
                         break;
-                    
+                    case MassUnits.USTon:
+                        ConvertedValue = _converter.GetUSTons(Value, ValueUnits);
+                        break;
+                    case MassUnits.UKTon:
+                        ConvertedValue = _converter.GetUKTons(Value, ValueUnits);
+                        break;
+
 
                 }
 
@@ -111,7 +117,37 @@ namespace EngineersToolbox.ViewModels
 
         public void Bind()
         {
+            ValueUnitsOptions = new ObservableCollection<MassUnitsSelector>()
+            {
+                new MassUnitsSelector() { Units = MassUnits.Milligram, UnitsName = "mg" },
+                new MassUnitsSelector() { Units = MassUnits.Gram, UnitsName = "g" },
+                new MassUnitsSelector() { Units = MassUnits.Kilogram, UnitsName = "kg" },
+                new MassUnitsSelector() { Units = MassUnits.Pound, UnitsName = "lb" },
+                new MassUnitsSelector() { Units = MassUnits.MetricTon, UnitsName = "ton (metric)" },
+                new MassUnitsSelector() { Units = MassUnits.USTon, UnitsName = "ton (US)" },
+                new MassUnitsSelector() { Units = MassUnits.UKTon, UnitsName = "ton (UK)" }
 
+            };
+            ConversionUnitsOptions = new ObservableCollection<MassUnitsSelector>()
+            {
+                new MassUnitsSelector() { Units = MassUnits.Milligram, UnitsName = "mg" },
+                new MassUnitsSelector() { Units = MassUnits.Gram, UnitsName = "g" },
+                new MassUnitsSelector() { Units = MassUnits.Kilogram, UnitsName = "kg" },
+                new MassUnitsSelector() { Units = MassUnits.Pound, UnitsName = "lb" },
+                new MassUnitsSelector() { Units = MassUnits.MetricTon, UnitsName = "ton (metric)" },
+                new MassUnitsSelector() { Units = MassUnits.USTon, UnitsName = "ton (US)" },
+                new MassUnitsSelector() { Units = MassUnits.UKTon, UnitsName = "ton (UK)" }
+            };
+
+            if (ValueUnitsSelector == null)
+            {
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == MassUnits.Pound);
+            }
+
+            if (ConvertedValueUnitsSelector == null)
+            {
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == MassUnits.Kilogram);
+            }
         }
     }
 }

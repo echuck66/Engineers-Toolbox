@@ -8,9 +8,12 @@ namespace EngineersToolbox.Models.Enums
 {
     public enum MassUnits
     {
+        Milligram,
         Gram,
         Kilogram,
-        Ton,
+        MetricTon,
+        USTon,
+        UKTon,
         Pound,
         Ounce
     }

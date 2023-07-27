@@ -129,27 +129,27 @@ namespace EngineersToolbox.ViewModels
             {
                 new AreaUnitsSelector() { Units = AreaUnits.Acre, UnitsName = "ac" },
                 new AreaUnitsSelector() { Units = AreaUnits.Hectare, UnitsName = "ha" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "cm2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "ft2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "in2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "km2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "m2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "mi2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "mm2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "yd2" }
+                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "sq cm" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "sq ft" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "sq in" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "sq km" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "sq m" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "sq mi" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "sq mm" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "sq yd" }
             };
             ConversionUnitsOptions = new ObservableCollection<AreaUnitsSelector>()
             {
                 new AreaUnitsSelector() { Units = AreaUnits.Acre, UnitsName = "ac" },
                 new AreaUnitsSelector() { Units = AreaUnits.Hectare, UnitsName = "ha" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "cm2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "ft2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "in2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "km2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "m2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "mi2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "mm2" },
-                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "yd2" }
+                new AreaUnitsSelector() { Units = AreaUnits.SquareCentimeter, UnitsName = "sq cm" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareFoot, UnitsName = "sq ft" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareInch, UnitsName = "sq in" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareKilometer, UnitsName = "sq km" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMeter, UnitsName = "sq m" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMile, UnitsName = "sq mi" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareMillimeter, UnitsName = "sq mm" },
+                new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "sq yd" }
             };
 
             if (ValueUnitsSelector == null)

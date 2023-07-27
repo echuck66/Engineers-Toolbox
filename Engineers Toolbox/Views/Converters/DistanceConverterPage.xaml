@@ -20,7 +20,7 @@
                         Size="43"/>
             </Image.Source>
         </Image>
-        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto" Padding="15">
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="15">
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Value"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Margin="0,0,0,3" Text="Convert To"  FontAttributes="Bold"/>
@@ -41,8 +41,10 @@
 
 
 
-            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:E}'}" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:F6}'}" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="4" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:E}'}" HorizontalTextAlignment="End" />
             <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
+            <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="4" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
         </Grid>
 
         

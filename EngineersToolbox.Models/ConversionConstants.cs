@@ -382,5 +382,71 @@ namespace EngineersToolbox.Models
         public const decimal CUBICYARD_TO_CUBICINCH_FACTOR = 46656M;
         public const decimal CUBICFOOT_TO_CUBICINCH_FACTOR = 1728M;
 
+        // Mass Factors
+        public const decimal KILOGRAM_TO_GRAM_FACTOR = 1000M;
+        public const decimal MILLIGRAM_TO_GRAM_FACTOR = 0.001M;
+        public const decimal METRICTON_TO_GRAM_FACTOR = 1000000M;
+        public const decimal USTON_TO_GRAM_FACTOR = 907184.74M;
+        public const decimal UKTON_TO_GRAM_FACTOR = 1016046.9088M;
+        public const decimal POUND_TO_GRAM_FACTOR = 453.59237M;
+        public const decimal OUNCE_TO_GRAM_FACTOR = 28.349523125M;
+
+        public const decimal GRAM_TO_KILOGRAM_FACTOR = 0.001M;
+        public const decimal MILLIGRAM_TO_KILOGRAM_FACTOR = 0.000001M;
+        public const decimal METRICTON_TO_KILOGRAM_FACTOR = 1000M;
+        public const decimal USTON_TO_KILOGRAM_FACTOR = 907.18474M;
+        public const decimal UKTON_TO_KILOGRAM_FACTOR = 1016.0469088M;
+        public const decimal POUND_TO_KILOGRAM_FACTOR = 0.45359237M;
+        public const decimal OUNCE_TO_KILOGRAM_FACTOR = 0.0283495231M;
+
+        public const decimal GRAM_TO_MILLIGRAM_FACTOR = 1000M;
+        public const decimal KILOGRAM_TO_MILLIGRAM_FACTOR = 1000000M;
+        public const decimal METRICTON_TO_MILLIGRAM_FACTOR = 1000000000M;
+        public const decimal USTON_TO_MILLIGRAM_FACTOR = 907184740M;
+        public const decimal UKTON_TO_MILLIGRAM_FACTOR = 1016046908.8M;
+        public const decimal POUND_TO_MILLIGRAM_FACTOR = 453592.37M;
+        public const decimal OUNCE_TO_MILLIGRAM_FACTOR = 28349.523125M;
+
+        public const decimal GRAM_TO_METRICTON_FACTOR = 0.000001M;
+        public const decimal KILOGRAM_TO_METRICTON_FACTOR = 0.001M;
+        public const decimal MILLIGRAM_TO_METRICTON_FACTOR = 1.0E-9M;
+        public const decimal USTON_TO_METRICTON_FACTOR = 0.90718474M;
+        public const decimal UKTON_TO_METRICTON_FACTOR = 1.0160469088M;
+        public const decimal POUND_TO_METRICTON_FACTOR = 0.0004535924M;
+        public const decimal OUNCE_TO_METRICTON_FACTOR = 0.0000283495M;
+
+        public const decimal GRAM_TO_USTON_FACTOR = 0.0000011023M;
+        public const decimal KILOGRAM_TO_USTON_FACTOR = 0.0011023113M;
+        public const decimal MILLIGRAM_TO_USTON_FACTOR = 1.10231131E-9M;
+        public const decimal METRICTON_TO_USTON_FACTOR = 1.1023113109M;
+        public const decimal UKTON_TO_USTON_FACTOR = 1.12M;
+        public const decimal POUND_TO_USTON_FACTOR = 0.0005M;
+        public const decimal OUNCE_TO_USTON_FACTOR = 0.00003125M;
+
+        public const decimal GRAM_TO_UKTON_FACTOR = 9.842065276E-7M;
+        public const decimal KILOGRAM_TO_UKTON_FACTOR = 0.0009842065M;
+        public const decimal MILLIGRAM_TO_UKTON_FACTOR = 9.842065276E-10M;
+        public const decimal METRICTON_TO_UKTON_FACTOR = 0.9842065276M;
+        public const decimal USTON_TO_UKTON_FACTOR = 0.8928571429M;
+        public const decimal POUND_TO_UKTON_FACTOR = 0.0004464286M;
+        public const decimal OUNCE_TO_UKTON_FACTOR = 0.0000279018M;
+
+        public const decimal GRAM_TO_POUND_FACTOR = 0.0022046226M;
+        public const decimal KILOGRAM_TO_POUND_FACTOR = 2.2046226218M;
+        public const decimal MILLIGRAM_TO_POUND_FACTOR = 0.0000022046M;
+        public const decimal METRICTON_TO_POUND_FACTOR = 2204.6226218M;
+        public const decimal USTON_TO_POUND_FACTOR = 2000M;
+        public const decimal UKTON_TO_POUND_FACTOR = 2240M;
+        public const decimal OUNCE_TO_POUND_FACTOR = 0.0625M;
+
+        public const decimal GRAM_TO_OUNCE_FACTOR = 0.0352739619M;
+        public const decimal KILOGRAM_TO_OUNCE_FACTOR = 35.27396195M;
+        public const decimal MILLIGRAM_TO_OUNCE_FACTOR = 0.000035274M;
+        public const decimal METRICTON_TO_OUNCE_FACTOR = 35273.96195M;
+        public const decimal USTON_TO_OUNCE_FACTOR = 32000M;
+        public const decimal UKTON_TO_OUNCE_FACTOR = 35840M;
+        public const decimal POUND_TO_OUNCE_FACTOR = 16M;
+
+
     }
 }

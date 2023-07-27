@@ -126,11 +126,11 @@ namespace EngineersToolbox.ViewModels
         {
             ValueUnitsOptions = new ObservableCollection<VolumeUnitsSelector>()
             {
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicCentimeter, UnitsName = "cc" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicFoot, UnitsName = "cf" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicInch, UnitsName = "in3" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicMeter, UnitsName = "m3" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicYard, UnitsName = "yd3" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicCentimeter, UnitsName = "cubic cm" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicFoot, UnitsName = "cubic ft" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicInch, UnitsName = "cubic in" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicMeter, UnitsName = "cubic m" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicYard, UnitsName = "cubic yd" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Gallon, UnitsName = "gl" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Liter, UnitsName = "l" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Milliliter, UnitsName = "ml" },
@@ -140,11 +140,11 @@ namespace EngineersToolbox.ViewModels
             };
             ConversionUnitsOptions = new ObservableCollection<VolumeUnitsSelector>()
             {
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicCentimeter, UnitsName = "cc" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicFoot, UnitsName = "cf" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicInch, UnitsName = "in3" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicMeter, UnitsName = "m3" },
-                new VolumeUnitsSelector() { Units = VolumeUnits.CubicYard, UnitsName = "yd3" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicCentimeter, UnitsName = "cubic cm" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicFoot, UnitsName = "cubic ft" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicInch, UnitsName = "cubic in" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicMeter, UnitsName = "cubic m" },
+                new VolumeUnitsSelector() { Units = VolumeUnits.CubicYard, UnitsName = "cubic yd" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Gallon, UnitsName = "gl" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Liter, UnitsName = "l" },
                 new VolumeUnitsSelector() { Units = VolumeUnits.Milliliter, UnitsName = "ml" },
