@@ -56,37 +56,40 @@ namespace EngineersToolbox.ViewModels
                 switch (ConvertedValueUnits)
                 {
                     case PressureUnits.Bar:
-                        //ConvertedValue = _converter.GetBars(Value, ValueUnits);
-                        break;
-                    case PressureUnits.KiloNewtonPerSquareMeter:
-                        //ConvertedValue = _converter.GetKilograms(Value, ValueUnits);
+                        ConvertedValue = _converter.GetBars(Value, ValueUnits);
                         break;
                     case PressureUnits.KiloPascal:
-                        //ConvertedValue = _converter.GetOunces(Value, ValueUnits);
-                        break;
-                    case PressureUnits.Microbar:
-                        //ConvertedValue = _converter.GetPounds(Value, ValueUnits);
-                        break;
-                    case PressureUnits.Millibar:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
-                        break;
-                    case PressureUnits.NewtonPerSquareCentimeter:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
-                        break;
-                    case PressureUnits.NewtonPerSquareMeter:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
-                        break;
-                    case PressureUnits.NewtonPerSquareMillimeter:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
-                        break;
-                    case PressureUnits.Pascal:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
+                        ConvertedValue = _converter.GetKiloPascals(Value, ValueUnits);
                         break;
                     case PressureUnits.psi:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
+                        ConvertedValue = _converter.GetPsi(Value, ValueUnits);
+                        break;
+                    case PressureUnits.ksi:
+                        ConvertedValue = _converter.GetKsi(Value, ValueUnits);
+                        break;
+                    case PressureUnits.KiloNewtonPerSquareMeter:
+                        ConvertedValue = _converter.GetKiloNewtonMeters(Value, ValueUnits);
+                        break;
+                    case PressureUnits.Microbar:
+                        ConvertedValue = _converter.GetMicroBars(Value, ValueUnits);
+                        break;
+                    case PressureUnits.Millibar:
+                        ConvertedValue = _converter.GetMilliBars(Value, ValueUnits);
+                        break;
+                    case PressureUnits.NewtonPerSquareMillimeter:
+                        ConvertedValue = _converter.GetNewtonMilliMeters(Value, ValueUnits);
+                        break;
+                    case PressureUnits.NewtonPerSquareCentimeter:
+                        ConvertedValue = _converter.GetNewtonCentiMeters(Value, ValueUnits);
+                        break;
+                    case PressureUnits.NewtonPerSquareMeter:
+                        ConvertedValue = _converter.GetNewtonMeters(Value, ValueUnits);
+                        break;
+                    case PressureUnits.Pascal:
+                        ConvertedValue = _converter.GetPascals(Value, ValueUnits);
                         break;
                     case PressureUnits.StandardAtmosphere:
-                        //ConvertedValue = _converter.GetTons(Value, ValueUnits);
+                        ConvertedValue = _converter.GetAtm(Value, ValueUnits);
                         break;
 
 
@@ -129,7 +132,45 @@ namespace EngineersToolbox.ViewModels
 
         public void Bind()
         {
+            ValueUnitsOptions = new ObservableCollection<PressureUnitsSelector>()
+            {
+                new PressureUnitsSelector() { Units = PressureUnits.Pascal, UnitsName = "Pa" },
+                new PressureUnitsSelector() { Units = PressureUnits.KiloPascal, UnitsName = "kPa" },
+                new PressureUnitsSelector() { Units = PressureUnits.Bar, UnitsName = "bar" },
+                new PressureUnitsSelector() { Units = PressureUnits.psi, UnitsName = "psi" },
+                new PressureUnitsSelector() { Units = PressureUnits.ksi, UnitsName = "ksi" },
+                new PressureUnitsSelector() { Units = PressureUnits.StandardAtmosphere, UnitsName = "atm" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareMeter, UnitsName = "newton/sq m" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareCentimeter, UnitsName = "newton/sq cm" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareMillimeter, UnitsName = "newton/sq mm" },
+                new PressureUnitsSelector() { Units = PressureUnits.Millibar, UnitsName = "mbar" },
+                new PressureUnitsSelector() { Units = PressureUnits.Microbar, UnitsName = "ubar" }
 
+            };
+            ConversionUnitsOptions = new ObservableCollection<PressureUnitsSelector>()
+            {
+                new PressureUnitsSelector() { Units = PressureUnits.Pascal, UnitsName = "Pa" },
+                new PressureUnitsSelector() { Units = PressureUnits.KiloPascal, UnitsName = "kPa" },
+                new PressureUnitsSelector() { Units = PressureUnits.Bar, UnitsName = "bar" },
+                new PressureUnitsSelector() { Units = PressureUnits.psi, UnitsName = "psi" },
+                new PressureUnitsSelector() { Units = PressureUnits.ksi, UnitsName = "ksi" },
+                new PressureUnitsSelector() { Units = PressureUnits.StandardAtmosphere, UnitsName = "atm" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareMeter, UnitsName = "newton/sq m" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareCentimeter, UnitsName = "newton/sq cm" },
+                new PressureUnitsSelector() { Units = PressureUnits.NewtonPerSquareMillimeter, UnitsName = "newton/sq mm" },
+                new PressureUnitsSelector() { Units = PressureUnits.Millibar, UnitsName = "mbar" },
+                new PressureUnitsSelector() { Units = PressureUnits.Microbar, UnitsName = "ubar" }
+            };
+
+            if (ValueUnitsSelector == null)
+            {
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == PressureUnits.psi);
+            }
+
+            if (ConvertedValueUnitsSelector == null)
+            {
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == PressureUnits.Bar);
+            }
         }
     }
 }

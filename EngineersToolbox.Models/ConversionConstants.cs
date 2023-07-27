@@ -447,6 +447,150 @@ namespace EngineersToolbox.Models
         public const decimal UKTON_TO_OUNCE_FACTOR = 35840M;
         public const decimal POUND_TO_OUNCE_FACTOR = 16M;
 
+        // Pressure Factors
+        public const decimal KILOPASCAL_TO_PASCAL_FACTOR = 1000M;
+        public const decimal BAR_TO_PASCAL_FACTOR = 100000M;
+        public const decimal PSI_TO_PASCAL_FACTOR = 6894.7572932M;
+        public const decimal KSI_TO_PASCAL_FACTOR = 6894757.2932M;
+        public const decimal ATM_TO_PASCAL_FACTOR = 101325M;
+        public const decimal NEWTONMETER_TO_PASCAL_FACTOR = 1M;
+        public const decimal NEWTONCENTIMETER_TO_PASCAL_FACTOR = 10000M;
+        public const decimal NEWTONMILLIMETER_TO_PASCAL_FACTOR = 1000000M;
+        public const decimal KILONEWTONMETER_TO_PASCAL_FACTOR = 1000M;
+        public const decimal MILLIBAR_TO_PASCAL_FACTOR = 100M;
+        public const decimal MICROBAR_TO_PASCAL_FACTOR = 0.1M;
+
+        public const decimal PASCAL_TO_KILOPASCAL_FACTOR = 0.001M;
+        public const decimal BAR_TO_KILOPASCAL_FACTOR = 100M;
+        public const decimal PSI_TO_KILOPASCAL_FACTOR = 6.8947572932M;
+        public const decimal KSI_TO_KILOPASCAL_FACTOR = 6894.7572932M;
+        public const decimal ATM_TO_KILOPASCAL_FACTOR = 101.325M;
+        public const decimal NEWTONMETER_TO_KILOPASCAL_FACTOR = 0.001M;
+        public const decimal NEWTONCENTIMETER_TO_KILOPASCAL_FACTOR = 10M;
+        public const decimal NEWTONMILLIMETER_TO_KILOPASCAL_FACTOR = 1000M;
+        public const decimal KILONEWTONMETER_TO_KILOPASCAL_FACTOR = 1M;
+        public const decimal MILLIBAR_TO_KILOPASCAL_FACTOR = 0.1M;
+        public const decimal MICROBAR_TO_KILOPASCAL_FACTOR = 0.0001M;
+
+        public const decimal PASCAL_TO_BAR_FACTOR = 0.00001M;
+        public const decimal KILOPASCAL_TO_BAR_FACTOR = 0.01M;
+        public const decimal PSI_TO_BAR_FACTOR = 0.0689475729M;
+        public const decimal KSI_TO_BAR_FACTOR = 68.947572932M;
+        public const decimal ATM_TO_BAR_FACTOR = 1.01325M;
+        public const decimal NEWTONMETER_TO_BAR_FACTOR = 0.00001M;
+        public const decimal NEWTONCENTIMETER_TO_BAR_FACTOR = 0.1M;
+        public const decimal NEWTONMILLIMETER_TO_BAR_FACTOR = 10M;
+        public const decimal KILONEWTONMETER_TO_BAR_FACTOR = 0.01M;
+        public const decimal MILLIBAR_TO_BAR_FACTOR = 0.001M;
+        public const decimal MICROBAR_TO_BAR_FACTOR = 0.000001M;
+
+        public const decimal PASCAL_TO_PSI_FACTOR = 0.0001450377M;
+        public const decimal KILOPASCAL_TO_PSI_FACTOR = 0.1450377377M;
+        public const decimal BAR_TO_PSI_FACTOR = 14.503773773M;
+        public const decimal KSI_TO_PSI_FACTOR = 1000M;
+        public const decimal ATM_TO_PSI_FACTOR = 14.695948775M;
+        public const decimal NEWTONMETER_TO_PSI_FACTOR = 0.0001450377M;
+        public const decimal NEWTONCENTIMETER_TO_PSI_FACTOR = 1.4503773773M;
+        public const decimal NEWTONMILLIMETER_TO_PSI_FACTOR = 145.03773773M;
+        public const decimal KILONEWTONMETER_TO_PSI_FACTOR = 0.1450377377M;
+        public const decimal MILLIBAR_TO_PSI_FACTOR = 0.0145037738M;
+        public const decimal MICROBAR_TO_PSI_FACTOR = 0.0000145038M;
+
+        public const decimal PASCAL_TO_KSI_FACTOR = 1.450377377E-7M;
+        public const decimal KILOPASCAL_TO_KSI_FACTOR = 0.0001450377M;
+        public const decimal BAR_TO_KSI_FACTOR = 0.0145037738M;
+        public const decimal PSI_TO_KSI_FACTOR = 0.001M;
+        public const decimal ATM_TO_KSI_FACTOR = 0.0146959488M;
+        public const decimal NEWTONMETER_TO_KSI_FACTOR = 1.450377377E-7M;
+        public const decimal NEWTONCENTIMETER_TO_KSI_FACTOR = 0.0014503774M;
+        public const decimal NEWTONMILLIMETER_TO_KSI_FACTOR = 0.1450377377M;
+        public const decimal KILONEWTONMETER_TO_KSI_FACTOR = 0.0001450377M;
+        public const decimal MILLIBAR_TO_KSI_FACTOR = 0.0000145038M;
+        public const decimal MICROBAR_TO_KSI_FACTOR = 1.450377377E-8M;
+
+        public const decimal PASCAL_TO_ATM_FACTOR = 0.0000098692M;
+        public const decimal KILOPASCAL_TO_ATM_FACTOR = 0.0098692327M;
+        public const decimal BAR_TO_ATM_FACTOR = 0.9869232667M;
+        public const decimal PSI_TO_ATM_FACTOR = 0.0680459639M;
+        public const decimal KSI_TO_ATM_FACTOR = 68.04596391M;
+        public const decimal NEWTONMETER_TO_ATM_FACTOR = 0.0000098692M;
+        public const decimal NEWTONCENTIMETER_TO_ATM_FACTOR = 0.0986923267M;
+        public const decimal NEWTONMILLIMETER_TO_ATM_FACTOR = 9.8692326672M;
+        public const decimal KILONEWTONMETER_TO_ATM_FACTOR = 0.0098692327M;
+        public const decimal MILLIBAR_TO_ATM_FACTOR = 0.0009869233M;
+        public const decimal MICROBAR_TO_ATM_FACTOR = 9.869232667E-7M;
+
+        public const decimal PASCAL_TO_NEWTONMETER_FACTOR = 1M;
+        public const decimal KILOPASCAL_TO_NEWTONMETER_FACTOR = 1000M;
+        public const decimal BAR_TO_NEWTONMETER_FACTOR = 100000M;
+        public const decimal PSI_TO_NEWTONMETER_FACTOR = 6894.7572932M;
+        public const decimal KSI_TO_NEWTONMETER_FACTOR = 6894757.2932M;
+        public const decimal ATM_TO_NEWTONMETER_FACTOR = 101325M;
+        public const decimal NEWTONCENTIMETER_TO_NEWTONMETER_FACTOR = 10000M;
+        public const decimal NEWTONMILLIMETER_TO_NEWTONMETER_FACTOR = 1000000M;
+        public const decimal KILONEWTONMETER_TO_NEWTONMETER_FACTOR = 1000M;
+        public const decimal MILLIBAR_TO_NEWTONMETER_FACTOR = 100M;
+        public const decimal MICROBAR_TO_NEWTONMETER_FACTOR = 0.1M;
+
+        public const decimal PASCAL_TO_NEWTONCENTIMETER_FACTOR = 0.0001M;
+        public const decimal KILOPASCAL_TO_NEWTONCENTIMETER_FACTOR = 0.1M;
+        public const decimal BAR_TO_NEWTONCENTIMETER_FACTOR = 10M;
+        public const decimal PSI_TO_NEWTONCENTIMETER_FACTOR = 0.6894757293M;
+        public const decimal KSI_TO_NEWTONCENTIMETER_FACTOR = 689.47572932M;
+        public const decimal ATM_TO_NEWTONCENTIMETER_FACTOR = 10.1325M;
+        public const decimal NEWTONMETER_TO_NEWTONCENTIMETER_FACTOR = 0.0001M;
+        public const decimal NEWTONMILLIMETER_TO_NEWTONCENTIMETER_FACTOR = 100M;
+        public const decimal KILONEWTONMETER_TO_NEWTONCENTIMETER_FACTOR = 0.1M;
+        public const decimal MILLIBAR_TO_NEWTONCENTIMETER_FACTOR = 0.01M;
+        public const decimal MICROBAR_TO_NEWTONCENTIMETER_FACTOR = 0.00001M;
+
+        public const decimal PASCAL_TO_NEWTONMILLIMETER_FACTOR = 0.000001M;
+        public const decimal KILOPASCAL_TO_NEWTONMILLIMETER_FACTOR = 0.001M;
+        public const decimal BAR_TO_NEWTONMILLIMETER_FACTOR = 0.1M;
+        public const decimal PSI_TO_NEWTONMILLIMETER_FACTOR = 0.0068947573M;
+        public const decimal KSI_TO_NEWTONMILLIMETER_FACTOR = 6.8947572932M;
+        public const decimal ATM_TO_NEWTONMILLIMETER_FACTOR = 0.101325M;
+        public const decimal NEWTONMETER_TO_NEWTONMILLIMETER_FACTOR = 0.000001M;
+        public const decimal NEWTONCENTIMETER_TO_NEWTONMILLIMETER_FACTOR = 0.01M;
+        public const decimal KILONEWTONMETER_TO_NEWTONMILLIMETER_FACTOR = 0.001M;
+        public const decimal MILLIBAR_TO_NEWTONMILLIMETER_FACTOR = 0.0001M;
+        public const decimal MICROBAR_TO_NEWTONMILLIMETER_FACTOR = 1.0E-7M;
+
+        public const decimal PASCAL_TO_KILONEWTONMETER_FACTOR = 0.001M;
+        public const decimal KILOPASCAL_TO_KILONEWTONMETER_FACTOR = 1M;
+        public const decimal BAR_TO_KILONEWTONMETER_FACTOR = 100M;
+        public const decimal PSI_TO_KILONEWTONMETER_FACTOR = 6.8947572932M;
+        public const decimal KSI_TO_KILONEWTONMETER_FACTOR = 6894.7572932M;
+        public const decimal ATM_TO_KILONEWTONMETER_FACTOR = 101.325M;
+        public const decimal NEWTONMETER_TO_KILONEWTONMETER_FACTOR = 0.001M;
+        public const decimal NEWTONCENTIMETER_TO_KILONEWTONMETER_FACTOR = 10M;
+        public const decimal NEWTONMILLIMETER_TO_KILONEWTONMETER_FACTOR = 1000M;
+        public const decimal MILLIBAR_TO_KILONEWTONMETER_FACTOR = 0.1M;
+        public const decimal MICROBAR_TO_KILONEWTONMETER_FACTOR = 0.0001M;
+
+        public const decimal PASCAL_TO_MILLIBAR_FACTOR = 0.01M;
+        public const decimal KILOPASCAL_TO_MILLIBAR_FACTOR = 10M;
+        public const decimal BAR_TO_MILLIBAR_FACTOR = 1000M;
+        public const decimal PSI_TO_MILLIBAR_FACTOR = 68.947572932M;
+        public const decimal KSI_TO_MILLIBAR_FACTOR = 68947.572932M;
+        public const decimal ATM_TO_MILLIBAR_FACTOR = 1013.25M;
+        public const decimal NEWTONMETER_TO_MILLIBAR_FACTOR = 0.01M;
+        public const decimal NEWTONCENTIMETER_TO_MILLIBAR_FACTOR = 100M;
+        public const decimal NEWTONMILLIMETER_TO_MILLIBAR_FACTOR = 10000M;
+        public const decimal KILONEWTONMETER_TO_MILLIBAR_FACTOR = 10M;
+        public const decimal MICROBAR_TO_MILLIBAR_FACTOR = 0.001M;
+
+        public const decimal PASCAL_TO_MICROBAR_FACTOR = 10M;
+        public const decimal KILOPASCAL_TO_MICROBAR_FACTOR = 10000M;
+        public const decimal BAR_TO_MICROBAR_FACTOR = 1000000M;
+        public const decimal PSI_TO_MICROBAR_FACTOR = 68947.572932M;
+        public const decimal KSI_TO_MICROBAR_FACTOR = 68947572.932M;
+        public const decimal ATM_TO_MICROBAR_FACTOR = 1013250M;
+        public const decimal NEWTONMETER_TO_MICROBAR_FACTOR = 10M;
+        public const decimal NEWTONCENTIMETER_TO_MICROBAR_FACTOR = 100000M;
+        public const decimal NEWTONMILLIMETER_TO_MICROBAR_FACTOR = 10000000M;
+        public const decimal KILONEWTONMETER_TO_MICROBAR_FACTOR = 10000M;
+        public const decimal MILLIBAR_TO_MICROBAR_FACTOR = 1000M;
 
     }
 }

@@ -12,6 +12,7 @@ namespace EngineersToolbox.Models.Enums
         KiloPascal,
         Bar,
         psi,
+        ksi,
         StandardAtmosphere,
         NewtonPerSquareMeter,
         NewtonPerSquareCentimeter,
