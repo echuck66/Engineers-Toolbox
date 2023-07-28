@@ -35,6 +35,8 @@
 	<key>UIRequiresFullScreen</key>
 	<true/>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>9</string>
+  <key>NSBluetoothPeripheralUsageDescription</key>
+  <string>Bluetooth referenced, but not used by this application.</string>
 </dict>
 </plist>

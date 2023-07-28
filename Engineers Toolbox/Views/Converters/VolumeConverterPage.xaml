@@ -47,5 +47,8 @@
             <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
             <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="4" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
         </Grid>
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
     </VerticalStackLayout>
 </ContentPage>

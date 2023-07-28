@@ -8,5 +8,9 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -47,7 +47,7 @@
                 Text="Estimations"
                 SemanticProperties.Hint="Open the Estimations Toolset"
                 HorizontalOptions="FillAndExpand" 
-                Command="{Binding OpenEstimationsPageCommand }" />
+                Command="{Binding OpenEstimationsPageCommand }" IsVisible="False" />
 
             <Button
                 Margin="10"
@@ -56,6 +56,9 @@
                 SemanticProperties.Hint="Open the Settings Toolset"
                 HorizontalOptions="FillAndExpand" 
                 Command="{Binding OpenSettingsPageCommand }" />
+
+            <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
         </VerticalStackLayout>
         
     </VerticalStackLayout>

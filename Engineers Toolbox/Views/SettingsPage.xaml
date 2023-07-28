@@ -62,6 +62,9 @@
                 <Picker Margin="5,0,0,0" Grid.Row="12" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding AngleConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultAngleConversionUnitsSelector}" />
 
             </Grid>
+
+            <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
