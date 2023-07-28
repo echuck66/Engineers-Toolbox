@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Enums;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,10 +13,12 @@ namespace EngineersToolbox.ViewModels
     public partial class AreaConverterViewModel : ToolboxBaseViewModel
     {
         private AreaConverter _converter;
+        private SettingsUtility _settingsService;
 
         public AreaConverterViewModel()
         {
             _converter = new AreaConverter();
+            _settingsService = new SettingsUtility();
             Title = "Area Conversion";
             Bind();
         }
@@ -152,14 +155,17 @@ namespace EngineersToolbox.ViewModels
                 new AreaUnitsSelector() { Units = AreaUnits.SquareYard, UnitsName = "sq yd" }
             };
 
+            var defaultUnits = _settingsService.GetDefaultAreaUnits();
+            var defaultConversionUnits = _settingsService.GetDefaultAreaConversionUnits();
+
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == AreaUnits.SquareFoot);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
 
             if (ConvertedValueUnitsSelector == null)
             {
-                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == AreaUnits.SquareMeter);
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == defaultConversionUnits);
             }
         }
     }

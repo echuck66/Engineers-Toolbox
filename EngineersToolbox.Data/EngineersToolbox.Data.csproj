@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0-preview2" />
   </ItemGroup>
 
   <ItemGroup>

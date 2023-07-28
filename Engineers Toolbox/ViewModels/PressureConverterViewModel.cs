@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Enums;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,10 +13,12 @@ namespace EngineersToolbox.ViewModels
     public partial class PressureConverterViewModel : ToolboxBaseViewModel
     {
         private PressureConverter _converter;
+        private SettingsUtility _settingsService;
 
         public PressureConverterViewModel()
         {
             _converter = new PressureConverter();
+            _settingsService = new SettingsUtility();
             Title = "Pressure Conversion";
             Bind();
         }
@@ -162,14 +165,17 @@ namespace EngineersToolbox.ViewModels
                 new PressureUnitsSelector() { Units = PressureUnits.Microbar, UnitsName = "ubar" }
             };
 
+            var defaultUnits = _settingsService.GetDefaultPressureUnits();
+            var defaultConversionUnits = _settingsService.GetDefaultPressureConversionUnits();
+
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == PressureUnits.psi);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
 
             if (ConvertedValueUnitsSelector == null)
             {
-                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == PressureUnits.Bar);
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == defaultConversionUnits);
             }
         }
     }

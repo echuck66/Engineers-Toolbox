@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Enums;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,10 +13,12 @@ namespace EngineersToolbox.ViewModels
     public partial class MassConverterViewModel : ToolboxBaseViewModel
     {
         private MassConverter _converter;
+        private SettingsUtility _settingsService;
 
         public MassConverterViewModel()
         {
             _converter = new MassConverter();
+            _settingsService = new SettingsUtility();
             Title = "Mass Conversion";
             Bind();
         }
@@ -139,14 +142,17 @@ namespace EngineersToolbox.ViewModels
                 new MassUnitsSelector() { Units = MassUnits.UKTon, UnitsName = "ton (UK)" }
             };
 
+            var defaultUnits = _settingsService.GetDefaultMassUnits();
+            var defaultConversionUnits = _settingsService.GetDefaultMassConversionUnits();
+
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == MassUnits.Pound);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
 
             if (ConvertedValueUnitsSelector == null)
             {
-                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == MassUnits.Kilogram);
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == defaultConversionUnits);
             }
         }
     }

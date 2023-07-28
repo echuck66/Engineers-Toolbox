@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Enums;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,10 +13,12 @@ namespace EngineersToolbox.ViewModels
     public partial class VolumeConverterViewModel : ToolboxBaseViewModel
     {
         private VolumeConverter _converter;
+        private SettingsUtility _settingsService;
 
         public VolumeConverterViewModel()
         {
             _converter = new VolumeConverter();
+            _settingsService = new SettingsUtility();
             Title = "Volume Conversion";
             Bind();
         }
@@ -152,14 +155,17 @@ namespace EngineersToolbox.ViewModels
                 new VolumeUnitsSelector() { Units = VolumeUnits.Quart, UnitsName = "qt" }
             };
 
+            var defaultUnits = _settingsService.GetDefaultVolumeUnits();
+            var defaultConversionUnits = _settingsService.GetDefaultVolumeConversionUnits();
+
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == VolumeUnits.Gallon);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
 
             if (ConvertedValueUnitsSelector == null)
             {
-                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == VolumeUnits.Liter);
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == defaultConversionUnits);
             }
         }
     }

@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Enums;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -12,10 +13,12 @@ namespace EngineersToolbox.ViewModels
     public partial class AngleConverterViewModel : ToolboxBaseViewModel
     {
         private AngleConverter _converter;
+        private SettingsUtility _settingsService;
 
         public AngleConverterViewModel()
         {
             _converter = new AngleConverter();
+            _settingsService = new SettingsUtility();
             Title = "Angle Conversion";
             Bind();
         }
@@ -108,11 +111,12 @@ namespace EngineersToolbox.ViewModels
                 new AngleUnitsSelector() { Units = AngleUnits.Degrees, UnitsName = "degrees" },
                 new AngleUnitsSelector() { Units =AngleUnits.Radians, UnitsName = "radians" }
             };
-            
+
+            var defaultUnits = _settingsService.GetDefaultAngleUnits();
 
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == AngleUnits.Degrees);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
         }
     }

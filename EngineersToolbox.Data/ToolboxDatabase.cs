@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using EngineersToolbox.Models.Entities;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,9 @@ namespace EngineersToolbox.Data
             if (Database is not null)
                 return;
 
-            Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
-            //var result = await Database.CreateTableAsync<TodoItem>();
+            Database = new SQLiteAsyncConnection(DBConstants.DatabasePath, DBConstants.Flags);
+
+            //var createDefaultUnitsTable = await Database.CreateTableAsync<ConverterDefaultUnits>();
         }
     }
 }

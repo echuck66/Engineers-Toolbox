@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Models.Enums
 {
     public enum DistanceUnits
     {

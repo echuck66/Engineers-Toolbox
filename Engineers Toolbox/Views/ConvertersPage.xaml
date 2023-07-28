@@ -77,7 +77,7 @@
 
             <Button
                     x:Name="OpenMassConverterBtn"
-                    Text="Mass Conversions"
+                    Text="Weight/Mass Conversions"
                     SemanticProperties.Hint="Open the Mass Converter Page"
                     HorizontalOptions="FillAndExpand" 
                     Command="{Binding OpenMassConverterPageCommand }"

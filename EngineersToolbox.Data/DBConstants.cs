@@ -7,7 +7,7 @@ using Xamarin.Essentials;
 
 namespace EngineersToolbox.Data
 {
-    public static class Constants
+    public static class DBConstants
     {
         public const string DatabaseFilename = "EngineersToolbox.db3";
 
