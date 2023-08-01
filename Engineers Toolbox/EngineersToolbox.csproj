@@ -70,15 +70,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+    <!-- App Icon -->
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" />
 
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
-		<!-- Images -->
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\Splash\splash110.svg" Color="#063970" BaseSize="128,128" />
+    <!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -91,12 +89,6 @@
 	  <None Remove="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
-	  <None Remove="Resources\Images\angle_left.svg" />
-	  <None Remove="Resources\Images\arrows_left_right_to_line.svg" />
-	  <None Remove="Resources\Images\calculator.svg" />
-	  <None Remove="Resources\Images\chart_area.svg" />
-	  <None Remove="Resources\Images\gas_pump.svg" />
-	  <None Remove="Resources\Images\percent.svg" />
 	  <None Remove="Resources\Images\toolbox.svg" />
 	</ItemGroup>
 
@@ -104,6 +96,9 @@
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.8.0-preview2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -111,6 +106,15 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CalculatorsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\MassConverterPage .xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Converters\VolumeConverterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EstimationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Calculators\FuelEconomyCalculator.xaml">
@@ -143,6 +147,9 @@
 	  <MauiXaml Update="Views\Converters\PressureConverterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ToolboxPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -151,6 +158,19 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\EngineersToolbox.Models\EngineersToolbox.Models.csproj" />
 	  <ProjectReference Include="..\EngineersToolbox.Services\EngineersToolbox.Services.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\Converters\MassConverterPage .xaml.cs">
+	    <DependentUpon>MassConverterPage .xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\EstimationPage.xaml.cs">
+	    <DependentUpon>EstimationPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\Estimations\" />
 	</ItemGroup>
 
 </Project>

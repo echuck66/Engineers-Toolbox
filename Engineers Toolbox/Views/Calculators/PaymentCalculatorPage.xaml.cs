@@ -1,5 +1,4 @@
 using EngineersToolbox.ViewModels;
-using Microsoft.Maui.Controls;
 
 namespace EngineersToolbox.Views.Calculators;
 

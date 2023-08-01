@@ -46,5 +46,7 @@
 
         <Label Margin="10" Text="{Binding HashedValue }"></Label>
 
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
     </VerticalStackLayout>
 </ContentPage>

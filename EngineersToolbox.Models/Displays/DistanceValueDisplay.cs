@@ -12,7 +12,7 @@ namespace EngineersToolbox.Models.Displays
 
         public string ValueText { get; set; }
 
-        public DistanceUnits ValueUnits { get; set; }
+        public Enums.DistanceUnits ValueUnits { get; set; }
 
         public string ValueUnitsText { get; set; }
     }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.Converters.VolumeConverterPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:VolumeConverterViewModel"
+             Shell.NavBarIsVisible="True"
+             xmlns:handlers="clr-namespace:EngineersToolbox.Handlers"
+             Title="Volume Converter">
+    <VerticalStackLayout>
+        <Image Margin="10">
+            <Image.Source>
+                <FontImageSource
+                        FontFamily="FontAwesomeSolid"
+                        Glyph="{StaticResource flask}"
+                        Color="{StaticResource Primary}"
+                        Size="43"/>
+            </Image.Source>
+        </Image>
+
+        <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="15">
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Value"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>
+            <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Margin="0,0,0,3" Text="Convert To"  FontAttributes="Bold"/>
+
+            <Entry Margin="5,0,0,0"  Grid.Row="1" Grid.Column="0" HeightRequest="45" Text="{Binding Value }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ValueUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ValueUnitsSelector}" />
+            <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="2" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding ConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding ConvertedValueUnitsSelector}" />
+
+            <Button
+                    Margin="10,10,0,0"
+                    x:Name="ConvertValueBtn"
+                    Text="Convert"
+                    SemanticProperties.Hint="Convert Value"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding ConvertValueCommand }"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3"/>
+
+
+
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:F6}'}" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="4" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValue, StringFormat='{0:E}'}" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
+            <Label VerticalOptions="Center" Grid.Column="1" Grid.Row="4" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding ConvertedValueUnitsSelector.UnitsName }" HorizontalTextAlignment="Start" />
+        </Grid>
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
+    </VerticalStackLayout>
+</ContentPage>

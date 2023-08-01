@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EngineersToolbox.Views.SettingsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
+             x:DataType="viewmodel:SettingsViewModel"
+             Shell.NavBarIsVisible="True"
+             Title="Settings">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image Margin="10">
+                <Image.Source>
+                    <FontImageSource
+                            FontFamily="FontAwesomeSolid"
+                            Glyph="{StaticResource gear}"
+                            Color="{StaticResource Primary}"
+                            Size="43"/>
+                </Image.Source>
+            </Image>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="15">
+                <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Margin="0,0,0,3" Text="Property"  FontAttributes="Bold"/>
+                <Label VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="0,0,0,3" Text="Units"  FontAttributes="Bold"/>
+
+                <Label Margin="5,0,0,0" Grid.Row="1" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Distance Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding DistanceUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultDistanceUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="2" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Distance Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="2" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding DistanceConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultDistanceConversionUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="3" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Area Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="3" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding AreaUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultAreaUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="4" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Area Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="4" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding AreaConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultAreaConversionUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="5" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Volume Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="5" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding VolumeUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultVolumeUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="6" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Volume Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="6" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding VolumeConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultVolumeConversionUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="7" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Weight/Mass Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="7" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding MassUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultMassUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="8" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Weight/Mass Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="8" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding MassConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultMassConversionUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="9" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Pressure Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="9" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding PressureUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultPressureUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="10" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Pressure Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="10" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding PressureConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultPressureConversionUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="11" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Angle Units (input)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="11" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding AngleUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultAngleUnitsSelector}" />
+
+                <Label Margin="5,0,0,0" Grid.Row="12" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Text="Angle Units (output)"></Label>
+                <Picker Margin="5,0,0,0" Grid.Row="12" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding AngleConversionUnitsOptions}" ItemDisplayBinding="{Binding UnitsName}" SelectedItem="{Binding DefaultAngleConversionUnitsSelector}" />
+
+            </Grid>
+
+            <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

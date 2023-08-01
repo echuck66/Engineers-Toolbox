@@ -1,4 +1,5 @@
 ﻿using EngineersToolbox.Models;
+using EngineersToolbox.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,6 @@ namespace EngineersToolbox.Services.Calculators
             _toolType = ToolType.Calculator;
             _calculatorType = CalculatorType.FuelEconomy;
         }
+
     }
 }

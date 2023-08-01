@@ -7,7 +7,7 @@
              ios:Page.UseSafeArea="True"
              xmlns:viewmodel="clr-namespace:EngineersToolbox.ViewModels"
              x:DataType="viewmodel:ToolboxViewModel"
-             Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="True"
              Title="Toolbox">
     <VerticalStackLayout Padding="10, 10">
        
@@ -26,20 +26,38 @@
 
             
             <Button
+                Margin="10"
                 x:Name="OpenConvertersBtn"
                 Text="Converters"
                 SemanticProperties.Hint="Open the Converters Toolset"
                 HorizontalOptions="FillAndExpand" 
-                Command="{Binding OpenConvertersPageCommand }" 
-                Clicked="OnOpenConvertersBtnClicked" />
-
+                Command="{Binding OpenConvertersPageCommand }" />
 
             <Button
+                Margin="10"
                 x:Name="OpenCalculatorsBtn"
                 Text="Calculators"
                 SemanticProperties.Hint="Open the Calculators Toolset"
                 HorizontalOptions="FillAndExpand" 
                 Command="{Binding OpenCalculatorsPageCommand }" />
+
+            <Button
+                Margin="10"
+                x:Name="OpenEstimationsBtn"
+                Text="Estimations"
+                SemanticProperties.Hint="Open the Estimations Toolset"
+                HorizontalOptions="FillAndExpand" 
+                Command="{Binding OpenEstimationsPageCommand }" IsVisible="False" />
+
+            <Button
+                Margin="10"
+                x:Name="OpenSettingsBtn"
+                Text="Settings"
+                SemanticProperties.Hint="Open the Settings Toolset"
+                HorizontalOptions="FillAndExpand" 
+                Command="{Binding OpenSettingsPageCommand }" />
+
+            <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
 
         </VerticalStackLayout>
         

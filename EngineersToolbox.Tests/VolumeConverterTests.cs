@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Tests
 {
-    public interface ICalculator : ITool
+    [TestClass]
+    public class VolumeConverterTests
     {
-        CalculatorType CalculatorType { get; }
     }
 }

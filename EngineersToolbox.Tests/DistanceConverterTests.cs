@@ -15,13 +15,14 @@ namespace EngineersToolbox.Tests
         const decimal feetInMile = 5280M;
         const decimal inchesInMeter = 39.3700787M;
         const decimal milesInKilometer = 1.609344M;
+        const decimal inchesToMeterFactor = 0.0254M;
 
         [TestMethod]
         public void GetMillimetersFromMillimeters_ReturnsMillimeters()
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal mm = converter.GetMillimeters(cm, Models.DistanceUnits.Millimeter);
+            decimal mm = converter.GetMillimeters(cm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedMM = cm;
 
@@ -33,7 +34,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal mm = converter.GetMillimeters(cm, Models.DistanceUnits.Centimeter);
+            decimal mm = converter.GetMillimeters(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedMM = cm * 10M;
 
@@ -45,7 +46,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal mm = converter.GetMillimeters(m, Models.DistanceUnits.Meter);
+            decimal mm = converter.GetMillimeters(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedMM = m * 1000M;
 
@@ -57,7 +58,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal mm = converter.GetMillimeters(km, Models.DistanceUnits.Kilometer);
+            decimal mm = converter.GetMillimeters(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedMM = km * 1000000M;
 
@@ -69,7 +70,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal mm = converter.GetMillimeters(inches, Models.DistanceUnits.Inch);
+            decimal mm = converter.GetMillimeters(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedMM = (inches / inchesInMeter) * 1000M;
 
@@ -81,7 +82,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal mm = converter.GetMillimeters(feet, Models.DistanceUnits.Foot);
+            decimal mm = converter.GetMillimeters(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedMM = ((feet * inchesInFoot) / inchesInMeter) * 1000M;
 
@@ -93,7 +94,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal mm = converter.GetMillimeters(yd, Models.DistanceUnits.Yard);
+            decimal mm = converter.GetMillimeters(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedMM = ((yd * inchesInYard) / inchesInMeter) * 1000M;
 
@@ -105,9 +106,14 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal mm = converter.GetMillimeters(mi, Models.DistanceUnits.Mile);
+            decimal mm = converter.GetMillimeters(mi, Models.Enums.DistanceUnits.Mile);
 
-            decimal expectedMM = (((mi * feetInMile) * inchesInFoot) / inchesInMeter) * 1000M;
+            var expectedFT = mi * feetInMile;
+            var expectedIN = expectedFT * inchesInFoot;
+            var expectedM = expectedIN * inchesToMeterFactor;
+            var expectedMM = expectedM * 1000M;
+
+            //decimal expectedMM = (((mi * feetInMile) * inchesInFoot) / inchesInMeter) * 1000M;
 
             Assert.AreEqual(expectedMM, mm, 5);
         }
@@ -117,7 +123,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal cm = converter.GetCentimeters(mm, Models.DistanceUnits.Millimeter);
+            decimal cm = converter.GetCentimeters(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedCM = mm / 10M;
 
@@ -129,7 +135,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal cmResults = converter.GetCentimeters(cm, Models.DistanceUnits.Centimeter);
+            decimal cmResults = converter.GetCentimeters(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedCM = cm;
 
@@ -141,7 +147,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal cm = converter.GetCentimeters(m, Models.DistanceUnits.Meter);
+            decimal cm = converter.GetCentimeters(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedCM = m * 100M;
 
@@ -153,7 +159,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal cm = converter.GetCentimeters(km, Models.DistanceUnits.Kilometer);
+            decimal cm = converter.GetCentimeters(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedCM = km * 100000M;
 
@@ -165,7 +171,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal cm = converter.GetCentimeters(inches, Models.DistanceUnits.Inch);
+            decimal cm = converter.GetCentimeters(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedCM = inches / inchesInMeter * 100M;
 
@@ -177,7 +183,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal cm = converter.GetCentimeters(feet, Models.DistanceUnits.Foot);
+            decimal cm = converter.GetCentimeters(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedCM = ((feet * inchesInFoot) / inchesInMeter) * 100M;
 
@@ -189,7 +195,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal cm = converter.GetCentimeters(yd, Models.DistanceUnits.Yard);
+            decimal cm = converter.GetCentimeters(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedCM = ((yd * inchesInYard) / inchesInMeter) * 100M;
 
@@ -201,7 +207,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal cm = converter.GetCentimeters(mi, Models.DistanceUnits.Mile);
+            decimal cm = converter.GetCentimeters(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedCM = ((mi * feetInMile * inchesInFoot) / inchesInMeter) * 100M;
 
@@ -214,7 +220,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal m = converter.GetMeters(mm, Models.DistanceUnits.Millimeter);
+            decimal m = converter.GetMeters(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedM = mm / 1000M;
 
@@ -226,7 +232,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal m = converter.GetMeters(cm, Models.DistanceUnits.Centimeter);
+            decimal m = converter.GetMeters(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedM = cm / 100M; ;
 
@@ -238,7 +244,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal mResults = converter.GetMeters(m, Models.DistanceUnits.Meter);
+            decimal mResults = converter.GetMeters(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedM = m;
 
@@ -250,7 +256,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal m = converter.GetMeters(km, Models.DistanceUnits.Kilometer);
+            decimal m = converter.GetMeters(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedM = km * 1000M;
 
@@ -262,7 +268,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal m = converter.GetMeters(inches, Models.DistanceUnits.Inch);
+            decimal m = converter.GetMeters(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedM = inches / inchesInMeter;
 
@@ -274,7 +280,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal m = converter.GetMeters(feet, Models.DistanceUnits.Foot);
+            decimal m = converter.GetMeters(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedM = (feet * inchesInFoot) / inchesInMeter;
 
@@ -286,7 +292,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal m = converter.GetMeters(yd, Models.DistanceUnits.Yard);
+            decimal m = converter.GetMeters(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedM = (yd * inchesInYard) / inchesInMeter;
 
@@ -298,7 +304,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal m = converter.GetMeters(mi, Models.DistanceUnits.Mile);
+            decimal m = converter.GetMeters(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedM = (mi * feetInMile * inchesInFoot) / inchesInMeter;
 
@@ -311,7 +317,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal km = converter.GetKilometers(mm, Models.DistanceUnits.Millimeter);
+            decimal km = converter.GetKilometers(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedKM = mm / 1000000M;
 
@@ -323,7 +329,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal km = converter.GetKilometers(cm, Models.DistanceUnits.Centimeter);
+            decimal km = converter.GetKilometers(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedKM = cm / 100000M; ;
 
@@ -335,7 +341,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal kmResults = converter.GetKilometers(m, Models.DistanceUnits.Meter);
+            decimal kmResults = converter.GetKilometers(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedKM = m / 1000M;
 
@@ -347,7 +353,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal kmResults = converter.GetKilometers(km, Models.DistanceUnits.Kilometer);
+            decimal kmResults = converter.GetKilometers(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedKM = km;
 
@@ -359,7 +365,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal km = converter.GetKilometers(inches, Models.DistanceUnits.Inch);
+            decimal km = converter.GetKilometers(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedKM = (inches / inchesInMeter) / 1000M;
 
@@ -371,7 +377,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal km = converter.GetKilometers(feet, Models.DistanceUnits.Foot);
+            decimal km = converter.GetKilometers(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedKM = ((feet / inchesInFoot) / inchesInMeter) / 1000M;
 
@@ -383,7 +389,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal km = converter.GetKilometers(yd, Models.DistanceUnits.Yard);
+            decimal km = converter.GetKilometers(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedKM = ((yd * inchesInYard) / inchesInMeter) / 1000M;
 
@@ -395,7 +401,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal km = converter.GetKilometers(mi, Models.DistanceUnits.Mile);
+            decimal km = converter.GetKilometers(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedKM = (((mi * feetInMile) * inchesInFoot) / inchesInMeter) / 1000M;
 
@@ -408,7 +414,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal inchesResults = converter.GetInches(mm, Models.DistanceUnits.Millimeter);
+            decimal inchesResults = converter.GetInches(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedIN = (mm / 1000M) * inchesInMeter;
 
@@ -420,7 +426,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal inches = converter.GetInches(cm, Models.DistanceUnits.Centimeter);
+            decimal inches = converter.GetInches(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedIN = (cm * 100M) / inchesInMeter;
 
@@ -432,7 +438,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal inches = converter.GetInches(m, Models.DistanceUnits.Meter);
+            decimal inches = converter.GetInches(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedIN = (m * inchesInMeter);
 
@@ -444,7 +450,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal inches = converter.GetInches(km, Models.DistanceUnits.Kilometer);
+            decimal inches = converter.GetInches(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedIN = (km * 1000M) * inchesInMeter;
 
@@ -456,7 +462,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal inchesResults = converter.GetInches(inches, Models.DistanceUnits.Inch);
+            decimal inchesResults = converter.GetInches(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedIN = inches;
 
@@ -468,7 +474,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal inches = converter.GetInches(feet, Models.DistanceUnits.Foot);
+            decimal inches = converter.GetInches(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedIN = feet * inchesInFoot;
 
@@ -480,7 +486,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal inches = converter.GetInches(yd, Models.DistanceUnits.Yard);
+            decimal inches = converter.GetInches(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedIN = yd * inchesInYard;
 
@@ -492,7 +498,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal inches = converter.GetInches(mi, Models.DistanceUnits.Mile);
+            decimal inches = converter.GetInches(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedIN = (mi * feetInMile) * inchesInFoot;
 
@@ -505,7 +511,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal inchesResults = converter.GetFeet(mm, Models.DistanceUnits.Millimeter);
+            decimal inchesResults = converter.GetFeet(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedIN = (mm / 1000M) * inchesInMeter;
 
@@ -517,7 +523,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal inches = converter.GetFeet(cm, Models.DistanceUnits.Centimeter);
+            decimal inches = converter.GetFeet(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedIN = (cm * 100M) / inchesInMeter;
 
@@ -529,7 +535,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal ftResults = converter.GetFeet(m, Models.DistanceUnits.Meter);
+            decimal ftResults = converter.GetFeet(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedFT = (m * inchesInMeter) / inchesInFoot;
 
@@ -541,7 +547,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal ftResults = converter.GetFeet(km, Models.DistanceUnits.Kilometer);
+            decimal ftResults = converter.GetFeet(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedFT = (km / milesInKilometer) * feetInMile;
 
@@ -553,7 +559,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal inchesResults = converter.GetFeet(inches, Models.DistanceUnits.Inch);
+            decimal inchesResults = converter.GetFeet(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedIN = inches;
 
@@ -565,7 +571,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal ftResults = converter.GetFeet(feet, Models.DistanceUnits.Foot);
+            decimal ftResults = converter.GetFeet(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedIN = feet;
 
@@ -577,7 +583,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal ftResults = converter.GetFeet(yd, Models.DistanceUnits.Yard);
+            decimal ftResults = converter.GetFeet(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedFT = (yd * inchesInYard) / inchesInFoot;
 
@@ -589,7 +595,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal inches = converter.GetFeet(mi, Models.DistanceUnits.Mile);
+            decimal inches = converter.GetFeet(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedIN = (mi * feetInMile);
 
@@ -602,7 +608,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal ydResults = converter.GetYards(mm, Models.DistanceUnits.Millimeter);
+            decimal ydResults = converter.GetYards(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedYD = ((mm / 1000M) * inchesInMeter) / inchesInYard;
 
@@ -614,7 +620,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal inches = converter.GetYards(cm, Models.DistanceUnits.Centimeter);
+            decimal inches = converter.GetYards(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedIN = (cm * 100M) / inchesInMeter;
 
@@ -626,7 +632,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal ydResults = converter.GetYards(m, Models.DistanceUnits.Meter);
+            decimal ydResults = converter.GetYards(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedYD = (m * inchesInMeter) / inchesInYard;
 
@@ -638,7 +644,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal ydResults = converter.GetYards(km, Models.DistanceUnits.Kilometer);
+            decimal ydResults = converter.GetYards(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedYD = ((km * 1000M) * inchesInMeter) / inchesInYard;
 
@@ -650,7 +656,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal inchesResults = converter.GetYards(inches, Models.DistanceUnits.Inch);
+            decimal inchesResults = converter.GetYards(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedIN = inches;
 
@@ -662,7 +668,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal ydResults = converter.GetYards(feet, Models.DistanceUnits.Foot);
+            decimal ydResults = converter.GetYards(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedYD = (feet * inchesInFoot) / inchesInYard;
 
@@ -674,7 +680,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal ydResults = converter.GetYards(yd, Models.DistanceUnits.Yard);
+            decimal ydResults = converter.GetYards(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedYD = yd;
 
@@ -686,7 +692,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal ydResults = converter.GetYards(mi, Models.DistanceUnits.Mile);
+            decimal ydResults = converter.GetYards(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedYD = ((mi * feetInMile) * inchesInFoot) / inchesInYard;
 
@@ -699,7 +705,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mm = 1M;
-            decimal miResults = converter.GetMiles(mm, Models.DistanceUnits.Millimeter);
+            decimal miResults = converter.GetMiles(mm, Models.Enums.DistanceUnits.Millimeter);
 
             decimal expectedMI = (((mm / 1000M) * inchesInMeter) / inchesInFoot) / feetInMile ;
 
@@ -711,7 +717,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal cm = 1M;
-            decimal miResults = converter.GetMiles(cm, Models.DistanceUnits.Centimeter);
+            decimal miResults = converter.GetMiles(cm, Models.Enums.DistanceUnits.Centimeter);
 
             decimal expectedIN = (((cm * 100M) / inchesInMeter) / inchesInFoot) / feetInMile;
 
@@ -723,7 +729,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal m = 1M;
-            decimal miResults = converter.GetMiles(m, Models.DistanceUnits.Meter);
+            decimal miResults = converter.GetMiles(m, Models.Enums.DistanceUnits.Meter);
 
             decimal expectedMI = ((m * inchesInMeter) / inchesInFoot) / feetInMile;
 
@@ -735,7 +741,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal km = 1M;
-            decimal miResults = converter.GetMiles(km, Models.DistanceUnits.Kilometer);
+            decimal miResults = converter.GetMiles(km, Models.Enums.DistanceUnits.Kilometer);
 
             decimal expectedMI = km * milesInKilometer;
 
@@ -747,7 +753,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal inches = 1M;
-            decimal miResults = converter.GetMiles(inches, Models.DistanceUnits.Inch);
+            decimal miResults = converter.GetMiles(inches, Models.Enums.DistanceUnits.Inch);
 
             decimal expectedMI = inches / inchesInFoot / feetInMile;
 
@@ -759,7 +765,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal feet = 1M;
-            decimal miResults = converter.GetMiles(feet, Models.DistanceUnits.Foot);
+            decimal miResults = converter.GetMiles(feet, Models.Enums.DistanceUnits.Foot);
 
             decimal expectedMI = feet / feetInMile;
 
@@ -771,7 +777,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal yd = 1M;
-            decimal miResults = converter.GetMiles(yd, Models.DistanceUnits.Yard);
+            decimal miResults = converter.GetMiles(yd, Models.Enums.DistanceUnits.Yard);
 
             decimal expectedMI = (yd / inchesInYard) / inchesInFoot / feetInMile;
 
@@ -783,7 +789,7 @@ namespace EngineersToolbox.Tests
         {
             DistanceConverter converter = new DistanceConverter();
             decimal mi = 1M;
-            decimal miResults = converter.GetMiles(mi, Models.DistanceUnits.Mile);
+            decimal miResults = converter.GetMiles(mi, Models.Enums.DistanceUnits.Mile);
 
             decimal expectedMI = mi;
 

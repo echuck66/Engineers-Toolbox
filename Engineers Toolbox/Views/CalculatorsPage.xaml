@@ -41,7 +41,7 @@
                     Text="Interest Calculator"
                     SemanticProperties.Hint="Interest Calculator"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding OpenInterestCalculatorPageCommand }" />
+                    Command="{Binding OpenInterestCalculatorPageCommand }" IsVisible="False" />
 
         <Button
                 Margin="10"
@@ -49,7 +49,9 @@
                     Text="Fuel Economy Calculator"
                     SemanticProperties.Hint="Fuel Economy Calculator"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding OpenFuelEconomyCalculatorPageCommand }" />
+                    Command="{Binding OpenFuelEconomyCalculatorPageCommand }" IsVisible="False" />
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
 
     </VerticalStackLayout>
 </ContentPage>

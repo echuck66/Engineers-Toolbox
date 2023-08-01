@@ -2,22 +2,24 @@
 using CommunityToolkit.Mvvm.Input;
 using EngineersToolbox.Models.Selectors;
 using EngineersToolbox.Services.Converters;
+using EngineersToolbox.Utility;
 using EngineersToolbox.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using DistanceUnits = EngineersToolbox.Models.DistanceUnits;
+using DistanceUnits = EngineersToolbox.Models.Enums.DistanceUnits;
 
 namespace EngineersToolbox.ViewModels
 {
     public partial class DistanceConverterViewModel : ToolboxBaseViewModel
     {
         private DistanceConverter _converter;
-
+        private SettingsUtility _settingsService;
         public DistanceConverterViewModel()
         {
             _converter = new DistanceConverter();
-            Title = "Distance Converter";
+            _settingsService = new SettingsUtility();
+            Title = "Distance Conversion";
             Bind();
         }
 
@@ -144,14 +146,17 @@ namespace EngineersToolbox.ViewModels
                 new DistanceUnitsSelector() { Units = DistanceUnits.Kilometer, UnitsName = "km" }
             };
 
+            var defaultUnits = _settingsService.GetDefaultDistanceUnits();
+            var defaultConversionUnits = _settingsService.GetDefaultDistanceConversionUnits();
+
             if (ValueUnitsSelector == null)
             {
-                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == DistanceUnits.Mile);
+                ValueUnitsSelector = ValueUnitsOptions.FirstOrDefault(o => o.Units == defaultUnits);
             }
 
             if (ConvertedValueUnitsSelector == null)
             {
-                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == DistanceUnits.Kilometer);
+                ConvertedValueUnitsSelector = ConversionUnitsOptions.FirstOrDefault(o => o.Units == defaultConversionUnits);
             }
         }
     }

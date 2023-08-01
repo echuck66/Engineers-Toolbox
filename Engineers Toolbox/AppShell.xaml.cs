@@ -24,6 +24,10 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AreaConverterPage), typeof(AreaConverterPage));
         Routing.RegisterRoute(nameof(PressureConverterPage), typeof(PressureConverterPage));
         Routing.RegisterRoute(nameof(NumberBaseConverterPage), typeof(NumberBaseConverterPage));
+        Routing.RegisterRoute(nameof(EstimationsPage), typeof(EstimationsPage));
+        Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
+        Routing.RegisterRoute(nameof(MassConverterPage), typeof(MassConverterPage));
+        Routing.RegisterRoute(nameof(VolumeConverterPage), typeof(VolumeConverterPage));
 	}
 
     public static async Task Alert(string message, string title = "Error")

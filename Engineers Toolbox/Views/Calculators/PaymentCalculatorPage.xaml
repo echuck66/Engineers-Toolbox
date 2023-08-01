@@ -26,19 +26,14 @@
             <Label VerticalOptions="Center" Grid.Row="2" Grid.Column="0" Margin="0,0,0,3" Text="Term"  FontAttributes="Bold"/>
             <Label VerticalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="0,0,0,3" Text="Frequency"  FontAttributes="Bold"/>
 
-            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="0" HeightRequest="45" HorizontalOptions="FillAndExpand">
-                <handlers:BorderlessEntry Text="{Binding Principal}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
-            </Frame>
-            
-            <Frame Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
-                <handlers:BorderlessEntry Text="{Binding InterestPercent}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
-            </Frame>
-            <Frame Margin="5,0,0,0" Grid.Row="3" Grid.Column="0" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
-                <handlers:BorderlessEntry Text="{Binding Term}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" />
-            </Frame>
-            <Frame Margin="5,0,0,0" Grid.Row="3" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-                <Picker VerticalOptions="Fill" HorizontalOptions="FillAndExpand" ItemsSource="{Binding FreqencyOptions}" ItemDisplayBinding="{Binding FrequencyName}" SelectedItem="{Binding FrequencySelector}" />
-            </Frame>
+            <Entry Margin="5,0,0,0"  Grid.Row="1" Grid.Column="0" HeightRequest="45" Text="{Binding Principal }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+
+            <Entry Margin="5,0,0,0"  Grid.Row="1" Grid.Column="1" HeightRequest="45" Text="{Binding InterestPercent }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+
+            <Entry Margin="5,0,0,0"  Grid.Row="3" Grid.Column="0" HeightRequest="45" Text="{Binding Term }" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="End" Style="{StaticResource NumericEntry}"></Entry>
+
+            <Picker  Margin="5,0,0,0" Grid.Row="3" Grid.Column="1" HeightRequest="45" VerticalOptions="Center" HorizontalOptions="FillAndExpand" ItemsSource="{Binding FreqencyOptions}" ItemDisplayBinding="{Binding FrequencyName}" SelectedItem="{Binding FrequencySelector}" />
+
             <Button
                     Margin="10,10,0,0"
                     x:Name="CalculatePaymentBtn"
@@ -51,7 +46,10 @@
 
 
 
-            <Label VerticalOptions="Center" Grid.ColumnSpan="2" Grid.Row="5" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding Payment }" HorizontalTextAlignment="End" />
+            <Label VerticalOptions="Center" Grid.ColumnSpan="2" Grid.Row="5" Margin="10,10,0,0" FontAttributes="Bold" Text="{Binding Payment, StringFormat='{0:C}'}" HorizontalTextAlignment="End" />
         </Grid>
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
+
     </VerticalStackLayout>
 </ContentPage>

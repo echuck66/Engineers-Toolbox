@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EngineersToolbox.Models
+namespace EngineersToolbox.Tests
 {
-    public interface IConverter : ITool
+    [TestClass]
+    public class AreaConverterTests
     {
-        public ConverterType ConverterType { get; }
+
     }
 }

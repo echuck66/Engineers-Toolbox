@@ -34,7 +34,7 @@
             Margin="25"
             RowSpacing="25"
             ColumnDefinitions="*" 
-            RowDefinitions="*,*,*,*,*">
+            RowDefinitions="*,*,*,*,*,*,*">
                 <Button
                     x:Name="OpenBase64ConverterBtn"
                     Text="Base64 String Conversions"
@@ -60,23 +60,42 @@
                     Grid.Row="2"  />
 
             <Button
-                    x:Name="OpenPressureConverterBtn"
-                    Text="Pressure Conversions"
-                    SemanticProperties.Hint="Open the Pressure Converter Page"
-                    HorizontalOptions="FillAndExpand" 
-                    Command="{Binding OpenPressureConverterPageCommand }"
-                    Grid.Row="3"  />
-            <Button
                     x:Name="OpenAngleConverterBtn"
                     Text="Angle Conversions"
                     SemanticProperties.Hint="Open the Angle Converter Page"
                     HorizontalOptions="FillAndExpand" 
                     Command="{Binding OpenAngleConverterPageCommand }"
-                    Grid.Row="4">
-                
-            </Button>
+                    Grid.Row="3" />
+
+            <Button
+                    x:Name="OpenVolumeConverterBtn"
+                    Text="Volume Conversions"
+                    SemanticProperties.Hint="Open the Volume Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenVolumeConverterPageCommand }"
+                    Grid.Row="4"  />
+
+            <Button
+                    x:Name="OpenMassConverterBtn"
+                    Text="Weight/Mass Conversions"
+                    SemanticProperties.Hint="Open the Mass Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenMassConverterPageCommand }"
+                    Grid.Row="5"  />
+
+            <Button
+                    x:Name="OpenPressureConverterBtn"
+                    Text="Pressure Conversions"
+                    SemanticProperties.Hint="Open the Pressure Converter Page"
+                    HorizontalOptions="FillAndExpand" 
+                    Command="{Binding OpenPressureConverterPageCommand }"
+                    Grid.Row="6"  />
+
+
         </Grid>
-           
+
+
+        <Label Margin="10" VerticalOptions="End" HorizontalOptions="Start">Copyright 2023, CrawfordNET Solutions, LLC</Label>
 
     </VerticalStackLayout>
 </ContentPage>
